@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "Anandhupa9526332548",
-    "database": "TutorTrack",
-    "host": "127.0.0.1",
+    "username": "tutortrack",
+    "password": "stoic-sack-3017",
+    "database": "Tutortrack",
+    "host": "tutortrack.cmuir7j66vqq.ap-south-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {

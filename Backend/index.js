@@ -13,9 +13,9 @@ const { User } =require("./models/index")  // require models here with model nam
 
 app.get("/",async(req,res)=>{
     try {
-        // await User.create({name:"Anandhu",email:"anandhupa131@gmail.com",password:"123456"})
-        // let data = await User.findAll();
-        res.send("home route")
+         await User.create({name:"Anandhu",email:"anandhupa131@gmail.com",password:"123456"})
+         let data = await User.findAll();
+        res.send(data)
     } catch (error) {
         console.log(error)
     }
