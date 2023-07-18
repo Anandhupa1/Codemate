@@ -1,12 +1,18 @@
 const express = require("express");
-const app = express()
+const app = express();
 const db = require("./models");
-require("dotenv").config()
+require("dotenv").config();
+const cookieParser = require("cookie-parser");
+const cors = require("cors");
+
 const { User } =require("./models/index")  // require models here with model names
-//__________________________________________________________________________________________________________
-
-
-
+//_________________________________________________________________________________________________________
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true
+  }));
+app.use(express.json())
+app.use(cookieParser())
 
 
 
