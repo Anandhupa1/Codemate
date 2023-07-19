@@ -12,7 +12,6 @@ async function  authenticateUser (req,res,next){
                  //console.log(decoded.userId,"decoded");
                  req.body.userId =decoded.userId;
                 // console.log(req.body)
-     
                 next()
              }
          }); 

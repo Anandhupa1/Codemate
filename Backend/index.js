@@ -4,11 +4,12 @@ const db = require("./models");
 require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-
 const { User } =require("./models/index");  // require models here with model names
 const { userRouter } = require("./routes/users.route");
 const { IndexRouter } = require("./routes/index.router");
-//_________________________________________________________________________________________________________
+const { googleAuthRouter } = require("./routes/googleAuth.route");
+
+//middlewares(inbuilt & third party)_________________________________________________________________________________________________________
 app.use(cors({
     origin: 'http://localhost:3000',
     credentials: true
@@ -17,10 +18,11 @@ app.use(express.json())
 app.use(cookieParser())
 
 
-//routes___________________________________________________________________________________________________
+//Mounted middlewares___________________________________________________________________________________________________
 
 app.use("/",IndexRouter);
 app.use("/user",userRouter);
+app.use("/auth/google",googleAuthRouter)
 
 
 //_________________________________________________________________________________________________________

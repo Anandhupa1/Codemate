@@ -1,9 +1,10 @@
 const IndexRouter = require("express").Router();
-
 const {authenticateUser} =require("../middlewares/authenticate.controller");
 const { User } =require("../models/index");
 
-IndexRouter.get("/",authenticateUser,async(req,res)=>{
+
+
+IndexRouter.get("/",async(req,res)=>{
     try {
          //await User.create({name:"Anandhu",email:"anandhupa131@gmail.com",password:"123456"})
          let data = await User.findAll();
@@ -12,7 +13,6 @@ IndexRouter.get("/",authenticateUser,async(req,res)=>{
         console.log(error)
     }
 })
-
 
 
 
