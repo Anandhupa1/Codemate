@@ -67,7 +67,7 @@ import {
             templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 2fr' }}
             spacing={8}>
             <Stack spacing={6}>
-              <Logo/>
+              <Logo width={"170px"}/>
               <Text fontSize={'sm'}>
                 © 2023 CodeMate. All rights reserved
               </Text>
