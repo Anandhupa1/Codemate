@@ -1,3 +1,5 @@
+const bcrypt = require("bcrypt")
+
 module.exports = (sequelize,DataTypes)=>{
     const User = sequelize.define("User",{
 
@@ -8,10 +10,16 @@ module.exports = (sequelize,DataTypes)=>{
         role: { type: DataTypes.ENUM('student', 'instructor', 'admin', 'moderator'),defaultValue: 'student',},
         
         
-        
-       
-    
     })
-    return User;
+
+        // Before saving the user, hash the password using bcrypt
+        User.beforeCreate(async (user) => {
+        const saltRounds = 10;
+        const hashedPassword = await bcrypt.hash(user.password, saltRounds);
+        user.password = hashedPassword;
+        });
+        return User;
+        };
     
-    }
+
+    

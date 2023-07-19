@@ -5,7 +5,9 @@ require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 
-const { User } =require("./models/index")  // require models here with model names
+const { User } =require("./models/index");  // require models here with model names
+const { userRouter } = require("./routes/users.route");
+const { IndexRouter } = require("./routes/index.router");
 //_________________________________________________________________________________________________________
 app.use(cors({
     origin: 'http://localhost:3000',
@@ -15,18 +17,10 @@ app.use(express.json())
 app.use(cookieParser())
 
 
+//routes___________________________________________________________________________________________________
 
-
-app.get("/",async(req,res)=>{
-    try {
-         await User.create({name:"Anandhu",email:"anandhupa131@gmail.com",password:"123456"})
-         let data = await User.findAll();
-        res.send(data)
-    } catch (error) {
-        console.log(error)
-    }
-})
-
+app.use("/",IndexRouter);
+app.use("/user",userRouter);
 
 
 //_________________________________________________________________________________________________________
