@@ -6,32 +6,48 @@ import  Login from "./pages/Login.jsx";
 import  Register from "./pages/Register";
 import Home from "./pages/Home"
 import Error from "./pages/Error"
+import Plans from "./pages/plans/Plans.jsx"
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home/>,
-    errorElement:<Error/>
+    path: '/',
+    element: (
+      <ChakraProvider>
+        <Home />
+      </ChakraProvider>
+    ),
+    errorElement: <Error />,
   },
   {
-    path: "/login",
-    element: <Login/>,
+    path: '/login',
+    element: (
+      <ChakraProvider>
+        <Login />
+      </ChakraProvider>
+    ),
   },
   {
-    path: "/register",
-    element: <Register/>,
+    path: '/register',
+    element: (
+      <ChakraProvider>
+        <Register />
+      </ChakraProvider>
+    ),
   },
-
+  {
+    path: '/plans',
+    element: <Plans />, // Plans route will not use ChakraProvider
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ChakraProvider>
+    
 
     <RouterProvider router={router} />
     
-    </ChakraProvider>
+    
   </React.StrictMode>
 );
 

@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+    background-color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  #container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1%;
+    margin: auto;
+  }
+  
+  .desc {
+    border: 1px solid rgb(200, 200, 200);
+    line-height: 15px;
+    background-color: #3a7ebe;
+    color: white;
+    border-radius: 15px;
+  }
+  
+  .plans {
+    border: 1px solid rgb(0, 0, 0);
+    width: 26%;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(214, 214, 214);
+    border-radius: 15px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .card {
+    width: 85%;
+    margin: auto;
+  }
+  
+  .card span {
+    font-size: 13px;
+  }
+  
+  .plans>button {
+    margin-top: 25%;
+    margin-bottom: 10%;
+    border-radius: 15px;
+    background-color: rgb(110, 184, 0);
+    padding: 8px 25px 8px 25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px dashed rgb(23, 2, 2);
+    transition: transform 0.3s ease;
+  }
+  
+  .plans>button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Media Queries for Responsive Styling */
+  @media screen and (max-width: 768px) {
+    #container {
+      width: 100%;
+    }
+  
+    .plans {
+      width: 45%;
+      margin-top: 15px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+
+    .plans {
+      width: 100%; 
+      margin-top: 15px;
+    }
+  }
+  
