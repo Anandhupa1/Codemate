@@ -1,44 +1,65 @@
+
+
 # TutorTrack
  Your Study Session Scheduler 
 
 project code    :  `stoic-sack-3017`
 Daily form submission link :  https://masai-school.notion.site/CW-B27-Daily-Submissions-4bd54df9085e464fa6182e4ed6ed7737
 
-
+theme highlight color : `#3a7ebe`
 
 ## Project Description 
-- **Description:** TutorTrack is a web application designed to help students schedule appointments with tutors. It features a backend system responsible for managing student data, tutor availability, and appointment scheduling. Amazon SES is utilized for sending appointment confirmations and reminders to students. The system design incorporates a load balancer to distribute traffic evenly across multiple servers, ensuring scalability and efficient resource utilization.
+1. User Management:
 
-Let's break down the project into more detailed pointers:
+User registration with email and password
+User login and authentication
+User profile page with editable details
 
-**1. Student Registration and Authentication:**
+2. Study Session Management:
 
-- Implement a user registration system for students, allowing them to create accounts on the platform.
-- Provide secure authentication mechanisms, such as password hashing and salting, to protect user credentials.
-- Implement features like email verification or password reset to enhance security and user experience.
+Create, update, and delete study sessions
+Set the date, time, and duration of study sessions
+Add a subject/topic and description for study sessions
+Display a list of upcoming study sessions
+Show past study sessions with details and attendance status
+3. Study Session Invitation and Collaboration:
 
-**2. Tutor Management :**
+Invite other users to join study sessions
+Receive and handle study session invitations
+View a list of study sessions to which the user has been invited
+Collaborate with other users during study sessions via messaging or chat
+4. Notifications and Reminders:
 
-- Store tutor information in a MongoDB database.
-- Maintain a collection of tutors, including their profiles, expertise, availability, and other relevant details.
-- Implement CRUD operations to manage tutors, allowing administrators to add, update, or remove tutor information.
+Send email or in-app notifications for upcoming study sessions
+Allow users to choose their notification preferences
+5. Calendar Integration:
 
-**3. Appointment Scheduling and Management:**
+Integrate with users' calendars (e.g., Google Calendar, Outlook) to display study sessions
+6. Search and Filters:
 
-- Design an intuitive interface for students to schedule appointments with tutors.
-- Implement a scheduling system that checks tutor availability and handles appointment conflicts.
-- Store appointment details, including student information, tutor assigned, appointment time, and any additional notes, in the database for easy retrieval.
+Search for study sessions by date, subject, or user
+Apply filters to find study sessions that match specific criteria
+7. Attendance Tracking:
 
-**4. Appointment Confirmations and Reminders Amazon SES (Can use other services as well):**
+Allow users to mark their attendance for study sessions
+Display attendance status for each study session
+8. Study Session Ratings and Feedback:
 
-- Utilize Amazon SES (Simple Email Service) to send appointment confirmations and reminders to students.
-- Configure email templates for appointment confirmations and reminders, providing essential details such as appointment time, tutor information, and meeting location (if applicable).
-- Use Amazon SES APIs or SDKs to send personalized emails to students, ensuring effective communication.
+Enable users to rate and provide feedback on study sessions and tutors
+9. Study Session History and Analytics:
 
-**5. Load Balancer for Traffic Distribution:**
+Provide users with an overview of their past study sessions and study time
+Display analytics on study session participation and progress
+10. Account Settings:
 
-- Incorporate a load balancer into the system design to evenly distribute incoming traffic across multiple servers.
-- Configure the load balancer to balance the load based on factors like server health, response time, or round-robin scheduling.
-- Ensure that the load balancer seamlessly handles scaling up or down as traffic demands change.
+Allow users to update their account information and preferences
+Provide options to change passwords or reset forgotten passwords
+11. Admin Panel (optional):
+
+Create an admin panel to manage users, study sessions, and other data
+Admins can view reports and analytics related to study sessions and user activity
+
+
+
 
 Remember to follow best practices for each technology, write well-documented code, and thoroughly test the project to ensure its functionality, scalability, and reliability.

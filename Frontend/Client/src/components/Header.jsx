@@ -37,6 +37,24 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 );
 
 export default function Header() {
+//_______userData_________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //_______________________________________________________________
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
