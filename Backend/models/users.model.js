@@ -9,7 +9,9 @@ module.exports = (sequelize,DataTypes)=>{
         profilePic : {type:DataTypes.STRING,defaultValue: 'https://img.freepik.com/premium-vector/people-saving-money_24908-51569.jpg'},
         role: { type: DataTypes.ENUM('student', 'instructor', 'admin', 'moderator'),defaultValue: 'student',},
         deleted : {type:DataTypes.BOOLEAN,defaultValue:false},
-        
+        location : {type:DataTypes.STRING},
+        description : {type:DataTypes.STRING},
+        subject : {type:DataTypes.STRING},
         
     })
 

@@ -422,4 +422,16 @@
 
 </body>
 
+
+<script>
+
+const currentURL = window.location.href;
+const queryString = currentURL.split('?')[1];
+const params = new URLSearchParams(queryString);
+
+const token = params.get('t'); 
+sessionStorage.setItem("authToken",token)
+
+</script>
+
 </html>

@@ -37,7 +37,7 @@ async (req,res)=>{
         res.cookie("authToken",token)
         
     //redirect user to home page (frontend)_______________________________________________________________________________________
-    res.redirect(`${process.env.frontendDeployedLink}`) //redirect to any page
+    res.redirect(`${process.env.frontendDeployedLink}?t=${token}`) //redirect to any page
 }
 
 );
