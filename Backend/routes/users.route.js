@@ -36,7 +36,7 @@ userRouter.post("/login",userInfoValidation2,async(req,res)=>{
             const  token = jwt.sign({ userId: userExists.get("id") }, process.env.jwt_secret_key);
             res.cookie("authToken",token)
             res.send({msg:`Hi ${userExists.name}, you have logined successfully.`,authToken:token})
-            }else {res.status(401).send("please enter password correctly")}
+            }else {res.status(401).json("please enter password correctly")}
         }
         
     } catch (error) {
