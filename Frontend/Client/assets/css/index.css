@@ -7,6 +7,80 @@
     background-color: #fff2e1;
 }
 
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+    background: #3a7ebe ;
+    height: 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.navbar .logo{
+    display: flex;
+    align-items: center;
+}
+/* .navbar .logo .square{
+    background-color: #23bdee;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    position: absolute;
+} */
+
+.square{
+    width: 200px ;
+}
+.navbar .logo h4{
+    position: relative;
+    margin-left: 8px;
+    letter-spacing: 2px;
+}
+
+.navbar .nav-list{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.navbar .nav-list li{
+    list-style: none;
+    font-size: 15px;
+}
+.navbar .nav-list li a{
+    text-decoration: none;
+    color: white ;
+}
+.navbar .nav-list button{
+    border: none;
+    padding: 10px 40px;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.navbar .nav-list .login{
+    background-color: #fff;
+}
+.navbar .nav-list .signup{
+    background-color: #f48c06;
+    color: #fff;
+}
+.hamburger{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+.hamburger .line{
+    width: 30px;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+    border-radius: 5px;
+}
+.hamburger .line:nth-child(3){
+    width: 15px;
+    margin-left: auto;
+}
 
 .hero{
     border-bottom-left-radius: 20%;
@@ -88,12 +162,14 @@
     width: 100px;
 }
 .mt-4{
-    margin-top: 4rem;
+    margin-top: 0rem;
 }
 .mt-5{
-    margin-top: 5rem;
+    margin-top: 0rem;
     padding: 70px;
     background-color: #FFF2E1 ;
+ border-radius: 200px;
+    
 }
 .heading{
     text-align: center;
@@ -465,7 +541,7 @@ mb-5{
 small{
     display: flex;
     align-items: center;
-    color: #9ca3af;
+    color: black;
     font-size: 15px;
 }
 .line{
@@ -571,11 +647,104 @@ small{
     margin-top: 0.5rem;
 }
 
+footer{
+    background-color: #3a7ebe;
+    text-align: center;
+    padding: 30px 20px;
+}
+footer .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* footer .logo .square{
+    width: 30px;
+    position: absolute;
+    height: 30px;
+    border: 1px solid #23bdee;
+    border-radius: 5px;
+    transform: rotate(45deg);
+} */
+footer .logo h4{
+    position: relative;
+    top: 0;
+    color: black;
+    left: 20px;
+}
+.v-line{
+    width: 1px;
+    height: 60px;
+    background-color: black;
+    margin-left: 1.5rem;
+}
+footer .edu-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.edu-logo span{
+    width: 100px;
+    color: black ;
+    font-size: 15px;
+}
+
+footer .subscribe-letter h5{
+    color: black ;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+footer .subscribe-letter input{
+    border: 1px solid black;
+    background-color: transparent;
+    padding: 8px 20px;
+    border-radius: 25px;
+    width: 180px;
+    font-size: 15px;
+    font-weight: 500;
+}
+footer .subscribe-letter button{
+    background: #F48C06 ;
+    border: none;
+    padding: 10px 20px;
+    color: black;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+footer .links a{
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    padding:0px 10px;
+}
+footer .links a:nth-child(1),footer .links a:nth-child(2){
+    border-right: 1px solid black;
+}
+footer .copyright p{
+    color: black;
+    font-size: 13px;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
 
 
 @media only screen and (max-width: 767px){
     .hamburger{
         display: flex;
+        color: black;
+    
+                
     }
     .hamburger.active .line:nth-child(1) {
         transform: translateY(10px) rotate(45deg);
@@ -587,12 +756,13 @@ small{
         width: 30px;
         transform: translateY(-6px) rotate(-45deg);
     }
+  
     .navbar ul{
         position: fixed;
         left: -100%;
         top: 6rem;
         flex-direction: column;
-        background-color: #fff2e1;
+        background-color: #3a7ebe;
         width: 100%;
         height: 100vh;
         transition: 0.3s;
