@@ -45,7 +45,7 @@
     <section class="hero bg-cream">
         <div class="main">
             <div class="hero-content">
-                <h2><span>Studying</span> Online is <br> now much easier</h2>
+                <h2><span>Studying</span> Online is <br> now much easier with CODEMATE</h2>
                 <p>Code Mate is an interesting platform that will teach you in more an interactive way</p>
                 <div class="buttons">
                     <button>Join For Free</button>
@@ -409,6 +409,50 @@
             hamburgerbtn.classList.toggle("active");
             nav_list.classList.toggle("active");
         });
+
+
+        
+
+
+        const textElement = document.querySelector('.hero-content h2');
+const text = textElement.innerText;
+const interval = 100; // Adjust the typing speed here (in milliseconds)
+let charIndex = 0;
+let isDeleting = false;
+
+function typeWriter() {
+    const currentText = text.slice(0, charIndex);
+
+    if (isDeleting) {
+        textElement.innerText = currentText;
+    } else {
+        textElement.innerText = currentText + '|'; // Add a blinking cursor
+    }
+
+    if (!isDeleting && charIndex <= text.length) {
+        charIndex++;
+    } else if (isDeleting && charIndex >= 0) {
+        charIndex--;
+    }
+
+    if (charIndex > text.length) {
+        isDeleting = true;
+    }
+
+    if (charIndex === 0) {
+        isDeleting = false;
+    }
+
+    setTimeout(typeWriter, isDeleting ? interval / 2 : interval);
+}
+
+// Start the typewriter effect after the page loads
+window.addEventListener('load', () => {
+    typeWriter();
+});
+
+
+
 
 
 
