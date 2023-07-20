@@ -11,10 +11,11 @@ const { googleAuthRouter } = require("./routes/googleAuth.route");
 const { authenticateUser } = require("./middlewares/authenticate.controller");
 
 //middlewares(inbuilt & third party)_________________________________________________________________________________________________________
-app.use(cors({
-    origin: process.env.frontendDeployedLink,
-    credentials: true
-  }));
+// app.use(cors({
+//     origin: process.env.frontendDeployedLink,
+//     credentials: true
+//   }));
+app.use(cors())
 app.use(express.json())
 app.use(cookieParser())
 

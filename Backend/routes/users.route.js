@@ -1,4 +1,5 @@
 const { userInfoValidation1,userInfoValidation2 } = require("../controllers/validations.controller");
+const { authenticateUser } = require("../middlewares/authenticate.controller");
 const userRouter = require("express").Router();
 const { User } =require("../models/index");
 const bcrypt = require('bcrypt');
@@ -29,21 +30,30 @@ userRouter.post("/login",userInfoValidation2,async(req,res)=>{
         })
         if(!userExists){res.status(404).json("Please register with your credentials")}
         else {
-            const val = await bcrypt.compare(req.body.password,userExists.password);
+            const val = await bcrypt.compare(req.body.password,userExists.get("password"));
             if(val){
             //creating and sending authToken
-            const  token = jwt.sign({ userId: userExists.id }, process.env.jwt_secret_key);
+            const  token = jwt.sign({ userId: userExists.get("id") }, process.env.jwt_secret_key);
             res.cookie("authToken",token)
-            res.end(`Hi ${userExists.name}, you have logined successfully.`)
+            res.send({msg:`Hi ${userExists.name}, you have logined successfully.`,authToken:token})
             }else {res.status(401).send("please enter password correctly")}
         }
         
     } catch (error) {
-        console.log("error in get , login",error)
+        console.log("error in post , login",error)
     }
 })
 
-
+userRouter.get("/profile",authenticateUser,async(req,res)=>{
+    try {
+        let data = await User.findOne({
+            where:{id:req.body.userId}
+        })
+        res.send(data)
+    } catch (error) {
+        console.log(error)
+    }
+})
 
 
 
