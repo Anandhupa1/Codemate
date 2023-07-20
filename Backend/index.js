@@ -12,7 +12,7 @@ const { authenticateUser } = require("./middlewares/authenticate.controller");
 
 //middlewares(inbuilt & third party)_________________________________________________________________________________________________________
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: process.env.frontendDeployedLink,
     credentials: true
   }));
 app.use(express.json())
