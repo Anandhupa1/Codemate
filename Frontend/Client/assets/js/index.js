@@ -23,8 +23,9 @@ if(token && !sessionStorage.getItem("logined") ){
         
          sessionStorage.setItem("logined","true");
          sessionStorage.setItem("userData",JSON.stringify(data));
-         updateUserInfo()
+         
         //  alert(JSON.stringify(data,null,2))
+        updateUserInfo()
     }
    }getUser()
 
@@ -39,21 +40,17 @@ let userDiv = document.getElementById("userInfoDiv");
 if(sessionStorage.getItem("logined")=="true"){
   let userData =JSON.parse(sessionStorage.getItem("userData"));
     userDiv.innerHTML=`
-    <a href="./pages/login.html">
-    <button class="signup"> ${userData.name} <i class="fa-solid fa-caret-down"></i></button>
-    </a>
-    <div class="dropdown-content">
-      <a href="./pages/profile.html">
-        <img src=${userData.profilePic} alt=${userData.name}>
-        <span>Profile</span>
-      </a>
-      <a  href="./pages/logout.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; &nbsp; Logout</a>
-    </div>`
+    <a href="./pages/login.html"><button class="signup">${userData.name}<i class="fa-solid fa-caret-down"></i></button></a>
+                    <div class="dropdown-content">
+                      <a href="./pages/profile.html">
+                        <img src=${userData.profilePic} alt="User Profile">
+                        <span>Profile</span>
+                      </a>
+                      <a href="./pages/logout.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; &nbsp; Logout</a>
+                    </div>`
 }else{
  userDiv.innerHTML=`
- <a href="./pages/login.html">
- <button class="signup">Login</button>
- </a>`
+ <a href="./pages/login.html"><button class="signup">Login</button></a>`
 }
 
 }updateUserInfo()

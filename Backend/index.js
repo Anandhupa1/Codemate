@@ -9,6 +9,7 @@ const { userRouter } = require("./routes/users.route");
 const { IndexRouter } = require("./routes/index.router");
 const { googleAuthRouter } = require("./routes/googleAuth.route");
 const { authenticateUser } = require("./middlewares/authenticate.controller");
+const redis = require('redis');
 
 //middlewares(inbuilt & third party)_________________________________________________________________________________________________________
 // app.use(cors({
