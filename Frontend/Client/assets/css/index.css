@@ -124,7 +124,10 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    border: 1px solid black;
+    border-radius: 100px;
 }
+
 .play a{
     text-decoration: none;
     color: black;
@@ -138,7 +141,7 @@
     border-radius: 50%;
 }
 .hero .main .img img{
-    width: 90%;
+    width: 85%;
 }
 /* rgba(156,163,175 */
 .partner{
@@ -245,7 +248,7 @@
     margin-top: 3rem;
 }
 .intro .container .instructor{
-    background-image: url("https://mhaecal.github.io/frontend/img/Rectangle%2019.png");
+    background-image: url("https://img.freepik.com/free-photo/young-woman-working-laptop-with-win-gesture-posing-isolated-turquoise-wall_231208-11520.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 280px;
@@ -255,6 +258,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 .intro .container .student{
     background-image: url("https://mhaecal.github.io/frontend/img/Rectangle%2021.png");
