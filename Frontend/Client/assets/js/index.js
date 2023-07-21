@@ -8,7 +8,7 @@ const token = params.get('t');
 if(token && !sessionStorage.getItem("logined") ){
   sessionStorage.setItem("authToken",token)
 
-   (async function(){
+  async function getUser(){
     
     const response = await fetch(`${baseUrl}/user/profile`, {
         method: 'GET', // Replace with the HTTP method you want (GET, POST, PUT, DELETE, etc.)
@@ -24,7 +24,7 @@ if(token && !sessionStorage.getItem("logined") ){
         // sessionStorage.setItem("logined",true);
         // sessionStorage.setItem("userData",JSON.stringify(data));
     }
-   })()
+   }getUser()
 
 
 }
