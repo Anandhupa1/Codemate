@@ -36,7 +36,7 @@ if(token && !sessionStorage.getItem("logined") ){
 function updateUserInfo(){
 let userDiv = document.getElementById("userInfoDiv");
 if(sessionStorage.getItem("logined")=="true"){
-  let userData =JSON.stringify(sessionStorage.getItem("userData"));
+  let userData =JSON.parse(sessionStorage.getItem("userData"));
     userDiv.innerHTML=`
     <a href="./pages/login.html">
     <button class="signup"> ${userData.name} <i class="fa-solid fa-caret-down"></i></button>
