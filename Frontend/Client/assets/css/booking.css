@@ -13,7 +13,7 @@ body{
 
 body::after {
     content: "";
-    background-image: url("https://www.shutterstock.com/image-photo/brutal-strong-bodybuilder-athletic-man-260nw-1277705647.jpg");
+    /* background-image: url("https://www.shutterstock.com/image-photo/brutal-strong-bodybuilder-athletic-man-260nw-1277705647.jpg"); */
     background-size: cover;
     background-position: center center;
     position: fixed;
