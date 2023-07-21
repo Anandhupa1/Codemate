@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>codemate | login </title>
+    <!-- sweet alert --><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Font Awesome --><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts --><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB --><link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
@@ -52,10 +53,12 @@
       
                   <hr class="my-4">
       
-                  <button  class="btn btn-lg btn-block btn-primary mb-3" style="background-color: rgb(209, 68, 17);"
-                    type="submit"><i class="fab fa-google me-2"></i> continue with google</button>
+                  <a href="http://localhost:4001/auth/google">
+                    <button  class="btn btn-lg btn-block btn-primary mb-3" style="background-color: rgb(209, 68, 17);"
+                      type="submit"><i class="fab fa-google me-2"></i> continue with google</button>
+                    </a>
                  
-                  <a style="margin-top: 40px;" href="/signup.html"> already have an account ? login here</a>
+                  <a style="margin-top: 40px;" href="./login.html"> already have an account ? login here</a>
                    
                 </div>
               </div>
@@ -78,7 +81,7 @@
 <!-- MDB --><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js" ></script>
 <script>
 
-
+let baseUrl = "http://localhost:4001"
 let submitBtn = document.getElementById("submitBtn");
 let name = document.getElementById("name");
 let email = document.getElementById("email");
@@ -94,12 +97,43 @@ submitBtn.addEventListener("click",(e)=>{
 
    }
 
-   alert(JSON.stringify(obj,null,2))
+  //  alert(JSON.stringify(obj,null,2))
+  registerUser(obj)
 })
 
+async function registerUser(obj){
+  let res = await fetch(`${baseUrl}/user/register`, {
+  method: 'POST',
+  body: JSON.stringify(obj),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+let data = await res.json();
+if(!res.ok){
+  
+  alert1(data)
+}
+else {
+  swal.fire({
+    title : data.msg,
+    icon:"success",
+    confirmationButtonText:"continue"
+  }).then((result)=>{
+    if(result.isConfirmed){window.location.href=`https://tutor-track.vercel.app?t=${data.authToken}`}
+  })
+  
+}
+ 
+}
 
-
-
+function alert1(msg="something went wrong"){
+  swal.fire({
+    title : "oops!!",
+    text : msg,
+    icon : "warning",
+  });
+}
     
 </script>
 </html>
