@@ -8,13 +8,16 @@
     <!-- Font Awesome --><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts --><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB --><link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
-</head>
-<body>
+  <style>
+
+  </style>
+  </head>
+<body style="background-image: url('../assets/images/bg.png');">
 
 
 
 
-    <section class="vh-100" style="background-color: #508bfc;">
+    <section class="vh-100" >
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -70,66 +73,6 @@
 </body>
 
 <!-- MDB --><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js" ></script>
-<script>
-
-if(sessionStorage.getItem("logined")=="true"){window.location.href=`https://tutor-track.vercel.app`}
-
-
-
-let baseUrl = "http://localhost:4001"
-let submitBtn = document.getElementById("submitBtn");
-let email = document.getElementById("email");
-let password = document.getElementById("password")
-submitBtn.addEventListener("click",(e)=>{
-   let obj = {
-    email : email.value,
-    password:password.value
-   }
-
-//___________________________________________________________________________________________________
-async function fetchData(){
-
- let res = await fetch(`${baseUrl}/user/login`, {
-  method: 'POST',
-  body: JSON.stringify(obj),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
-let data = await res.json();
-if(!res.ok){
-  
-  alert1(data)
-}
-else {
-  
-  swal.fire({
-    title : data.msg,
-    icon:"success",
-    confirmationButtonText:"continue"
-  }).then((result)=>{
-    if(result.isConfirmed){window.location.href=`https://tutor-track.vercel.app?t=${data.authToken}`}
-  })
-}
-
-
-
-}fetchData()
-
-
-//__________________________________________________________________________________________________
-})
-
-
-function alert1(msg="something went wrong"){
-  swal.fire({
-    title : "oops!!",
-    text : msg,
-    icon : "warning",
-  });
-}
-
-    
-</script>
+<script src="../assets/js/login.js"></script>
 </html>
 

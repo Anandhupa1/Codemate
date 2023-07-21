@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Codemate | student dashboard </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/Frontend/Client/assets/css/studentdash.css">
+
+</head>
+
+<body>
+
+    <!-- nav bar -->
+    <header>
+        <nav class="navbar bg-cream">
+            <div class="logo">
+                <img class="square" src="/Frontend/Client/assets/images/final.jpeg" alt="" srcset="">
+    
+            </div>
+            <ul class="nav-list">
+                <li><a href="">Home</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">About Us</a></li>
+                <button class="login">Login</button>
+                <button class="signup">Sign Up</button>
+            </ul>
+            <div class="hamburger">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line lin2-3"></div>
+            </div>
+        </nav>
+    </header> 
+
+    <!-- Start Home -->
+
+
+    <div class="loader" id="loader">
+    </div>
+    <!-- Loader End -->
+    <div id="sorting_div">
+        <div id="count_div"></div>
+        <div id="location_div">
+            <select id="location">
+                <option selected value="">Choose a location</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Pune">Pune</option>
+                <option value="Lucknow">Lucknow</option>
+                <option value="Noida">Noida</option>
+                <option value="Gurugram">Gurugram</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Kerela">Kerela</option>
+            </select>
+        </div>
+        <div id="subject_div">
+            <select id="subject">
+                <option selected value="">Choose a subject</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="NODE.JS">NODE.JS</option>
+                <option value="REACT">REACT</option>
+                <option value="JAVA">JAVA</option>
+                <option value="DATA-SCIENCE">DATA-SCIENCE</option>
+                <option value="SQL">SQL</option>
+                <option value="C++">C++</option>
+            </select>
+        </div>
+        <div id="sort">
+            <select id="form-select" aria-label="Default select example">
+                <option selected value="">Sort by Price:</option>
+                <option value="desc">High-to-low</option>
+                <option value="asc">Low-to-high</option>
+                <option value="3">Recommended</option>
+            </select>
+        </div>
+    </div>
+    <hr id="sort_line" />
+
+    <div id="search-results">
+        <!-- Append Here -->
+        <div class="loader2" id="loader2">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <div class="bar4"></div>
+            <div class="bar5"></div>
+            <div class="bar6"></div>
+            <div class="bar7"></div>
+            <div class="bar8"></div>
+            <div class="bar9"></div>
+            <div class="bar10"></div>
+            <div class="bar11"></div>
+            <div class="bar12"></div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="mt-6">
+        <div class="edu-logo">
+            <div class="logo">
+                <img class="square" src="./assets/images/final.jpeg" alt="" srcset="">
+            </div>
+            <div class="v-line"></div>
+            <span>Virtual Class for Zoom</span>
+        </div>
+        <div class="subscribe-letter mt-4">
+            <h5>Subscribe to get our Newsletter</h5>
+            <div class="form">
+                <input type="text" placeholder="Your Email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="links mt-4">
+            <a href="">About Us</a>
+            <a href="">Privacy</a>
+            <a href="">Terms & Condition</a>
+        </div>
+        <div class="copyright">
+            <p>Code Mate ©2022-24 Online Tutor Booking Pvt Ltd</p>
+        </div>
+    </footer>
+
+<!-- feeter end here  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./scripts/trainer.js"></script>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+        wow = new WOW(
+            {
+                animateClass: 'animated',
+                offset: 0,
+            }
+        );
+        wow.init();
+    </script> -->
+</body>
+
+</html>
