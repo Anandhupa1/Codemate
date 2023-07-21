@@ -20,9 +20,10 @@ if(token && !sessionStorage.getItem("logined") ){
     if(!response.ok){alert("res.ok!==true")}
     else {
         let data = await response.json();
-       
-         sessionStorage.setItem("logined",true);
+        
+         sessionStorage.setItem("logined","true");
          sessionStorage.setItem("userData",JSON.stringify(data));
+         alert(JSON.stringify(data,null,2))
     }
    }getUser()
 
