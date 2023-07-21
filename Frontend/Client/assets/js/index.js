@@ -30,3 +30,15 @@ if(token && !sessionStorage.getItem("logined") ){
 
 }
 // sessionStorage.setItem("authToken",token)
+
+
+// update user info in navbar;
+function updateUserInfo(){
+let userDiv = document.getElementById("userDiv");
+if(sessionStorage.getItem("logined")=="true"){
+    userDiv.innerHTML=""
+}else{
+
+}
+
+}
