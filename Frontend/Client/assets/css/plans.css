@@ -1,83 +1,125 @@
-body {
-    margin: 0;
-    margin-top: 50px;
-    padding: 0;
-    background-color: aliceblue;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  #container {
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 1%;
-    margin: auto;
-  }
-  
-  .desc {
-    border: 1px solid rgb(200, 200, 200);
-    line-height: 15px;
-    background-color: #3a7ebe;
-    color: white;
-    border-radius: 15px;
-  }
-  
-  .plans {
-    border: 1px solid rgb(0, 0, 0);
-    width: 26%;
-    margin: auto;
-    text-align: center;
-    background-color: rgb(214, 214, 214);
-    border-radius: 15px;
-  }
-  
-  h2 {
-    text-align: center;
-  }
-  
-  .card {
-    width: 85%;
-    margin: auto;
-  }
-  
-  .card span {
-    font-size: 13px;
-  }
-  
-  .plans>button {
-    margin-top: 25%;
-    margin-bottom: 10%;
-    border-radius: 15px;
-    background-color: rgb(110, 184, 0);
-    padding: 8px 25px 8px 25px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    border: 1px dashed rgb(23, 2, 2);
-    transition: transform 0.3s ease;
-  }
-  
-  .plans>button:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Media Queries for Responsive Styling */
-  @media screen and (max-width: 768px) {
-    #container {
-      width: 100%;
-    }
-  
-    .plans {
-      width: 45%;
-      margin-top: 15px;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
 
-    .plans {
-      width: 100%; 
-      margin-top: 15px;
-    }
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+
+:root {
+  --primary-color: #3a7ebe;
+  --secondary-color: #F48C06;
+}
+
+body {
+
+  background-color: #f9f9f9;
+  background-image: url("/Frontend/Client/assets/images/back.png");
+
+}
+
+#container {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  margin: auto;
+  justify-content: center; /* Center the boxes horizontally */
+}
+
+.desc {
+  border: 1px solid rgba(200, 200, 200, 0.5);
+  line-height: 1.6;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.plans {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 26%;
+  text-align: center;
+  background-color:#FFF2E1 ;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: relative; /* Add relative positioning for absolute element */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color:black ;
+  text-transform: uppercase;
+}
+
+.card {
+  width: 85%;
+  margin: auto;
+}
+
+.card span {
+  font-size: 14px;
+}
+
+.plans>button {
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: var(--secondary-color);
+  padding: 15px 25px;
+  color: white;
+  padding-left: 45px;
+  padding-right: 45px ;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.plans>button:hover {
+  transform: scale(1.05);
+}
+
+/* Extraordinary Elements */
+
+/* Add a diagonal ribbon on the top-left corner of the plans box */
+.plans::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border-width: 0 70px 70px 0;
+  border-style: solid;
+  border-color: transparent var(--secondary-color) transparent transparent;
+}
+
+/* Add a decorative element on the bottom-right corner of the plans box */
+.plans::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+/* Styling for the body container to create a hero section */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: -1;
+}
