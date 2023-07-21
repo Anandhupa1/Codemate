@@ -13,7 +13,7 @@
 body {
 
   background-color: #f9f9f9;
-  background-image: url("/Frontend/Client/assets/images/back.png");
+  background-image: url("../images/back.png");
 
 }
 
@@ -24,6 +24,7 @@ body {
   gap: 1%;
   margin: auto;
   justify-content: center; /* Center the boxes horizontally */
+  padding-top: 85px;
 }
 
 .desc {

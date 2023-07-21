@@ -6,8 +6,49 @@
     <title>Plans</title>
     <link rel="stylesheet" href="../assets/css/plans.css">
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/index.css"
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
+
+  <header>
+    <nav class="navbar bg-cream">
+        <div class="logo">
+            <img class="square" src="../assets/images/final.jpeg" alt="" srcset="">
+
+        </div>
+        <ul class="nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./plans.html">Plans</a></li>
+            <!-- <li><a href="./pages/booking.html">find Tutor</a></li> -->
+            <li><a href="./aboutUs.html">About Us</a></li>
+            <div id="userInfoDiv" class="dropdown">
+               
+                <!-- <a href="/Frontend/Client/pages/login.html"><button class="signup">Login</button></a>
+                <div class="dropdown-content">
+                  <a href="./pages/profile.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8clSwmM0xD39K8pNTs3ScdSo3eK_d7S0DMZRHVnFFkg&s" alt="User Profile">
+                    <span>Profile</span>
+                  </a>
+                  <a href="./pages/logout.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; &nbsp; Logout</a>
+                </div> -->
+             
+            </div>
+              
+            
+        </ul>
+        <div class="hamburger">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line lin2-3"></div>
+        </div>
+    </nav>
+</header>
+
+
+
     <div id=container>
         <div class=plans>
           <div class=desc>
@@ -62,5 +103,111 @@
   
           </div>
       </div>
+
+
+
+
+    <!-- footer section starts  -->
+    <footer class="footer-sec">
+        <div class="mainn">
+          
+          
+          <div class="logo row">
+            <div class="footer-header">
+              <img src="../assets/images/final.jpeg" class="manik" alt="">
+            </div>
+
+            <div class="logo-des">
+              <p>Whether you want to dive into web development, app creation, or data science, our tutors will guide you every step of the way..</p>
+
+            </div>
+            
+            
+          </div>
+          
+          
+          
+          <div class="office row">
+            <div class="footer-header">
+              <h3>Office Address</h3>
+            </div>
+            <div class="office-des">
+              <p>here are <br> many variations of courses<br>of codding<br>available</p>
+  
+            </div>
+          </div>
+          
+          
+          <div class="link row">
+            <div class="footer-header">
+              <h3>Important Links</h3>
+            </div>
+            
+            <div class="link-des">
+              <a href="./index.html" class="footer-links">Home</a>
+              <a href="./pages/aboutUs.html" class="footer-links">About Us</a>
+              <a href="./pages/plans.html" class="footer-links">Our Plans</a>
+              <a href="#" class="footer-links">Career</a>
+              <a href="#" class="footer-links">Our Services</a>
+
+            </div>
+            
+          </div>
+          
+          
+          <div class="newsletter row">
+            <div class="footer-header">
+              <h3>Newsletter</h3>
+            </div>
+            <div class="newsletter-des">
+              <div class="subcribe"><i class="sub-icon ri-mail-check-fill"></i>
+                <input type="mail" placeholder = "Enter Email ID" required>
+                <i class="sub-icon ri-arrow-right-line"></i>
+              </div>
+              <div class="icons">
+                <a href="#"><i class="social-icon ri-facebook-fill"></i></a>
+                <a href="#"><i class="social-icon ri-instagram-line"></i></a>
+                <a href="#"><i class="social-icon ri-linkedin-fill"></i></a>
+                <a href="#"><i class="social-icon ri-github-line"></i></a>
+                
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+        <div class="copyright">
+        <hr>
+        
+        <p>
+            online tutor | booking | find tutor | book online | hire tutor | schedule session | virtual tutoring | reserve spot | e-tutor | make appointment | live tutoring | secure lesson | remote tutor | confirm booking | internet-based tutoring | arrange session | digital tutor | set up meeting | web-based tutoring | request session
+           <br> © Copyright 2023  Code Mate </p>
+        </div>
+      </footer>
+
+    <script>
+        let hamburgerbtn = document.querySelector(".hamburger");
+        let nav_list = document.querySelector(".nav-list");
+        hamburgerbtn.addEventListener("click", () => {
+            hamburgerbtn.classList.toggle("active");
+            nav_list.classList.toggle("active");
+        });
+
+
+    
+
+
+
+
+
+
+        
+    </script>
+
+
+
+
 </body>
+
+<script src="../assets/js/index.js"></script>
 </html>

@@ -870,8 +870,12 @@ input[type="mail"] {
 }
 
 .icons a {
+  width: 45px;
+  height: 45px;
+  text-align: center;
   text-decoration: none;
   color: #fff;
+  text-align: center;
   border: 1px solid #fff;
   justify-content: center;
   padding: 10px;
