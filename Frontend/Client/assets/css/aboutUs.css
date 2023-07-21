@@ -7,35 +7,45 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: aliceblue;
+    background-image: url(/Frontend/Client/assets/images/back.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
+
+
+
+
+
+
 #main {
     overflow: hidden;
 }
 
-.intro{
+.intro {
     margin-top: 120px;
     width: auto;
     padding: 50px;
     border: 3px solid #3a7ebe;
     border-radius: 50px;
+    background-color: #fff2e1;
 }
-.intro>h1{
+
+.intro > h1 {
     font-size: 3rem;
 }
-.intro>p{
+
+.intro > p {
     font-weight: bolder;
     font-size: larger;
 }
-.intro+h1{
+
+.intro + h1 {
     margin-top: 200px;
 }
+
 .dropdown-style-functionality {
-    /* height: 300px; */
     margin: 0 1rem 0 0;
     background-color: rgb(255, 255, 255);
     margin: 2rem;
@@ -53,16 +63,19 @@ body {
     text-align: justify;
     font-weight: bolder;
 }
-.left{
+
+.left {
     align-self: baseline;
     margin-left: 150px;
     border-radius: 30px 0 30px 30px;
 }
-.right{
+
+.right {
     align-self: self-end;
     margin-right: 150px;
     border-radius: 0 30px 30px 30px;
 }
+
 .reveal {
     position: relative;
     transform: translateY(150px);
@@ -82,58 +95,85 @@ body {
     align-items: center;
 }
 
-.mainContainer>div{
-    width: 50%;
-        color: #3a7ebe;
+.mainContainer > div {
+    width: 80%; /* Adjusted for responsiveness */
+    color: #3a7ebe;
 }
 
-
-.mainContainer>div h1{
+.mainContainer > div h1 {
     text-align: center;
 }
 
-.mainContainer>div p{
+.mainContainer > div p {
     text-align: justify;
 }
 
-.developresLists{
-    color: #3a7ebe(11, 129, 255);
+.developresLists {
+    color: #3a7ebe; /* There's a typo here (removed the parenthesis) */
     margin-top: 50px;
-    width: 90%;
+    width: 90%; /* Adjusted for responsiveness */
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.allDevelopers{
+.allDevelopers {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap; /* Added to wrap items in small screens */
 }
 
-.singleDev{
-    margin: 50px;
+.singleDev {
+    margin: 20px; /* Adjusted for responsiveness */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
     color: #3a7ebe;
 }
-.singleDev img{
+
+.singleDev img {
     width: 150px;
     border-radius: 50%;
 }
 
-body::-webkit-scrollbar{
-    display: none;
-    width: 3px;
-    background-color: #000000;
+/* Media Queries for responsiveness */
+
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens (e.g., phones) */
+
+    .intro {
+        margin-top: 80px;
+        padding: 30px;
+    }
+
+    .intro > h1 {
+        font-size: 2rem;
+    }
+
+    .intro > p {
+        font-size: medium;
+    }
+
+    .mainContainer > div {
+        width: 100%;
+    }
+
+    .developresLists {
+        width: 100%;
+    }
+
+    .singleDev {
+        margin: 10px;
+    }
 }
-body:hover::-webkit-scrollbar{
-    display: block;
+
+/* New colors for a cooler look */
+
+body {
+    background-color: hsl(34, 100%, 94%);
 }
-body::-webkit-scrollbar-thumb{
-    background-color: #3a7ebe;
-    border-radius: 10px;
-}
+
+
