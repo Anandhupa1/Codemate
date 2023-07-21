@@ -23,7 +23,7 @@ if(token && !sessionStorage.getItem("logined") ){
         
          sessionStorage.setItem("logined","true");
          sessionStorage.setItem("userData",JSON.stringify(data));
-         alert(JSON.stringify(data,null,2))
+        //  alert(JSON.stringify(data,null,2))
     }
    }getUser()
 
