@@ -31,7 +31,7 @@
 
 /* Style the links inside the dropdown */
 .dropdown-content a {
-  display: flex; /* Use flexbox to align items horizontally */
+  display: block; /* Use flexbox to align items horizontally */
   align-items: center; /* Center the image and text vertically */
   padding: 8px 16px; /* Decrease padding for a more compact dropdown */
   text-decoration: none;
