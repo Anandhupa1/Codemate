@@ -6,7 +6,7 @@ const params = new URLSearchParams(queryString);
 const token = params.get('t'); 
 
 if(token && !sessionStorage.getItem("logined") ){
-  
+  sessionStorage.setItem("authToken",token)
 
    (async function(){
     

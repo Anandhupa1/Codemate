@@ -8,6 +8,31 @@ Daily form submission link :  https://masai-school.notion.site/CW-B27-Daily-Subm
 
 theme highlight color : `#3a7ebe`
 
+
+
+
+
+##to protect your pages (ie,only logined user can access some pages), please put the below code at top of javascript file 
+````javascript
+if(sessionStorage.getItem("logined")=="true"){window.location.href=`https://tutor-track.vercel.app`}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Project Description 
 1. User Management:
 

@@ -13,11 +13,14 @@ userRouter.post("/register",userInfoValidation1,async(req,res)=>{
         if(userExists){res.status(409).json("Email is already registered, kindly login")}
         else {
             let data = await User.create(req.body);
-            res.send(data)
+            //creating and sending authToken after registering for first time.
+            const  token = jwt.sign({ userId: data.get("id") }, process.env.jwt_secret_key);
+            
+            res.send({msg:`Hi ${data.get("name")}, you have registered successfully.`,authToken:token})
         }
         
     } catch (error) {
-        console.log("error in get , login",error)
+        console.log("error in get , register",error)
     }
 })
 
@@ -35,7 +38,7 @@ userRouter.post("/login",userInfoValidation2,async(req,res)=>{
             //creating and sending authToken
             const  token = jwt.sign({ userId: userExists.get("id") }, process.env.jwt_secret_key);
             res.cookie("authToken",token)
-            res.send({msg:`Hi ${userExists.name}, you have logined successfully.`,authToken:token})
+            res.send({msg:`Hi ${userExists.get('name')}, you have logined successfully.`,authToken:token})
             }else {res.status(401).json("please enter password correctly")}
         }
         
