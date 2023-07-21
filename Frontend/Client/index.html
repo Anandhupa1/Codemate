@@ -10,7 +10,7 @@
     <!-- google font link  -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
         rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="./assets/css/index.css">
 
@@ -30,11 +30,17 @@
                 <li><a href="">Careers</a></li>
                 <li><a href="">Blog</a></li>
                 <li><a href="">About Us</a></li>
-                <div>
-                    <!-- <button class="login">Login</button> -->
-                    <a href="./pages/login.html"></a><button class="signup">Login</button></a>
-                    
-                </div>
+                <div class="dropdown">
+                    <button class="signup">Login</button>
+                    <div class="dropdown-content">
+                      <a href="./pages/profile.html">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8clSwmM0xD39K8pNTs3ScdSo3eK_d7S0DMZRHVnFFkg&s" alt="User Profile">
+                        <span>Profile</span>
+                      </a>
+                      <a href="./pages/logout.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; &nbsp; Logout</a>
+                    </div>
+                  </div>
+                  
                 
             </ul>
             <div class="hamburger">
