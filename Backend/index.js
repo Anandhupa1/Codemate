@@ -15,7 +15,17 @@ const { authenticateUser } = require("./middlewares/authenticate.controller");
 //     origin: process.env.frontendDeployedLink,
 //     credentials: true
 //   }));
-app.use(cors())
+const corsOptions = {
+    origin: (origin, callback) => {
+      // Allow requests from any origin
+      callback(null, true);
+    },
+    optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+  };
+  
+  // Enable CORS with the custom function allowing all origins
+  app.use(cors(corsOptions));
+  
 app.use(express.json())
 app.use(cookieParser())
 

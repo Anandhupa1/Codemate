@@ -12,10 +12,12 @@ theme highlight color : `#3a7ebe`
 
 
 
-##to protect your pages (ie,only logined user can access some pages), please put the below code at top of javascript file 
 ````javascript
-if(sessionStorage.getItem("logined")=="true"){window.location.href=`https://tutor-track.vercel.app`}
+to protect your pages (ie,only logined user can access some pages), please put the below code at top of 
 
+
+if(sessionStorage.getItem("logined")=="true"){window.location.href=`https://tutor-track.vercel.app`}
+````
 
 
 
