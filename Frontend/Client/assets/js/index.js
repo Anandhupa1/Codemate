@@ -34,11 +34,25 @@ if(token && !sessionStorage.getItem("logined") ){
 
 // update user info in navbar;
 function updateUserInfo(){
-let userDiv = document.getElementById("userDiv");
+let userDiv = document.getElementById("userInfoDiv");
 if(sessionStorage.getItem("logined")=="true"){
-    userDiv.innerHTML=""
+  let userData =JSON.stringify(sessionStorage.getItem("userData"));
+    userDiv.innerHTML=`
+    <a href="./pages/login.html">
+    <button class="signup"> ${userData.name} <i class="fa-solid fa-caret-down"></i></button>
+    </a>
+    <div class="dropdown-content">
+      <a href="./pages/profile.html">
+        <img src=${userData.profilePic} alt=${userData.name}>
+        <span>Profile</span>
+      </a>
+      <a  href="./pages/logout.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; &nbsp; Logout</a>
+    </div>`
 }else{
-
+ userDiv.innerHTML=`
+ <a href="./pages/login.html">
+ <button class="signup">Login</button>
+ </a>`
 }
 
-}
+}updateUserInfo()
