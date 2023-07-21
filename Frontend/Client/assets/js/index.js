@@ -40,7 +40,7 @@ let userDiv = document.getElementById("userInfoDiv");
 if(sessionStorage.getItem("logined")=="true"){
   let userData =JSON.parse(sessionStorage.getItem("userData"));
     userDiv.innerHTML=`
-    <a href="/Frontend/Client/pages/login.html"><button class="signup">${userData.name}<i class="fa-solid fa-caret-down"></i></button></a>
+    <a href="./pages/login.html"><button class="signup">${userData.name}<i class="fa-solid fa-caret-down"></i></button></a>
                     <div class="dropdown-content">
                       <a href="./pages/profile.html">
                         <img src=${userData.profilePic} alt="User Profile">
@@ -50,7 +50,7 @@ if(sessionStorage.getItem("logined")=="true"){
                     </div>`
 }else{
  userDiv.innerHTML=`
- <a href="/Frontend/Client/pages/login.html"><button class="signup">Login</button></a>`
+ <a href="./pages/login.html"><button class="signup">Login</button></a>`
 }
 
 }updateUserInfo()
