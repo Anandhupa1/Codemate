@@ -12,6 +12,7 @@ module.exports = (sequelize,DataTypes)=>{
         location : {type:DataTypes.STRING},
         description : {type:DataTypes.STRING},
         subject : {type:DataTypes.STRING},
+        fees : {type:DataTypes.INTEGER},
         
     })
 

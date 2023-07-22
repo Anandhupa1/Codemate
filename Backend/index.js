@@ -9,6 +9,7 @@ const { userRouter } = require("./routes/users.route");
 const { IndexRouter } = require("./routes/index.router");
 const { googleAuthRouter } = require("./routes/googleAuth.route");
 const { authenticateUser } = require("./middlewares/authenticate.controller");
+const { bookingRouter } = require("./routes/booking.route");
 
 
 //middlewares(inbuilt & third party)_________________________________________________________________________________________________________
@@ -35,7 +36,8 @@ app.use(cookieParser())
 
 app.use("/",IndexRouter);
 app.use("/user",userRouter);
-app.use("/auth/google",googleAuthRouter)
+app.use("/auth/google",googleAuthRouter);
+app.use("/bookings",bookingRouter);
 
 
 

@@ -57,7 +57,44 @@ userRouter.get("/profile",authenticateUser,async(req,res)=>{
         console.log(error)
     }
 })
+userRouter.patch("/update",authenticateUser,async(req,res)=>{
+    try {
+        let {role,password,cPassword,...obj}=req.body;
+       
 
+        const updatedUser  = await User.update(
+            obj,
+            {
+              where: { id: req.body.userId },
+              returning: true // This option is required to get the updated record as a result
+            }
+          );
+      let output = await User.findOne({where:{id:req.body.userId}});
+      res.send(output)
+
+    } catch (error) {
+        console.log(error)
+    }
+})
+userRouter.delete("/delete/:id",authenticateUser,async(req,res)=>{
+    try {
+       
+       
+
+        const updatedUser  = await User.update(
+            {deleted:true},
+            {
+              where: { id: req.params.id },
+              returning: true // This option is required to get the updated record as a result
+            }
+          );
+      let output = await User.findOne({where:{id:req.params.id}});
+      res.send(output)
+
+    } catch (error) {
+        console.log(error)
+    }
+})
 
 
 module.exports ={userRouter}
