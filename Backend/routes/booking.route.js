@@ -3,6 +3,30 @@ const {Booking} = require("../models/index");
 const bookingRouter = require("express").Router();
 const {authenticateUser} = require("../middlewares/authenticate.controller");
 
+
+async function isTutorAvailable(tutorID, date, timeSlot) {
+  try {
+    const startTime = new Date(`${date} ${timeSlot}`);
+    const endTime = new Date(startTime.getTime() + 60 * 60 * 1000); 
+
+    const existingAppointment = await Booking.findOne({
+      where: {
+        instructorID: tutorID,
+        date: {
+          [Op.eq]: date
+        },
+        timeSlot: {
+          [Op.between]: [timeSlot, endTime.toTimeString().slice(0, 8)]
+        }
+      }
+    });
+    return !existingAppointment;
+  } catch (error) {
+    console.error('Error checking tutor availability:', error);
+    throw new Error('An error occurred while checking tutor availability.');
+  }
+}
+
 //Make a new Booking
 bookingRouter.post("/book-slot/:instructorID",authenticateUser, authorizeRole, async(req,res)=>{
 
@@ -11,6 +35,12 @@ bookingRouter.post("/book-slot/:instructorID",authenticateUser, authorizeRole, a
 
     try {
         const { date, timeSlot, day, meetingType } = req.body;
+
+        const isAvailable = await isTutorAvailable(instructorID, date, timeSlot);
+
+        if (!isAvailable) {
+          return res.status(400).json({ error: 'Tutor is not available during the requested time slot.' });
+        }
 
         const newBooking = await Booking.create({
             instructorID,
@@ -29,7 +59,6 @@ bookingRouter.post("/book-slot/:instructorID",authenticateUser, authorizeRole, a
 })
 
 // Update Route for booking
-
 bookingRouter.put("/update/:bookingID", authenticateUser, authorizeRole, async(req,res)=> {
     try {
         const { bookingID } = req.params;
