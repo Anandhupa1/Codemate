@@ -120,11 +120,12 @@ body {
 .container{
 	max-width: 1170px;
 	margin: auto;
+height: 100vh;
 }
 
 body::after {
     content: "";
-    background-image: url("/Frontend/Client/assets/images/bg.png");
+    background-image: url("../images/back.png");
     background-size: cover;
     background-position: center center;
     position: fixed;
@@ -136,6 +137,7 @@ body::after {
     /* Set the desired opacity value */
     pointer-events: none;
     z-index: -1;
+
   }
   
   a {
@@ -160,7 +162,7 @@ body::after {
     width: 10px;
     height: 50px;
     margin: 0 1px;
-    background-color: #dd4545;
+    background-color: #f48c06;
     animation: loaderAnimation 1.2s infinite;
   }
   
@@ -230,26 +232,7 @@ body::after {
     margin-bottom: 20px;
   }
   
-  /* Footer */
-/* Footer */
-/* Footer */
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    margin-top: 40px;
-    margin-left: 50px;
-    margin-right: 50px;
-  
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: calc(100% - 100px); /* Subtract the left and right margins from the total width */
 
-  }
   
   
   footer ul {
@@ -298,20 +281,6 @@ footer {
       font-size: 12px;
     }
   
-    footer {
-      padding: 10px;
-      font-size: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      margin-top: 40px;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-
   
     }
   
@@ -322,7 +291,7 @@ footer {
     ion-icon {
       font-size: 20px;
     }
-  }
+  
   
   /* For screens between 481px and 768px */
   @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -344,22 +313,67 @@ footer {
       font-size: 13px;
     }
   
-    footer {
-        padding: 10px;
-        font-size: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-        margin-top: 40px;
+  }
+
+
+
   
-      
-        position: fixed;
-        bottom: 0;
-        left: 0;
+
+
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   
+  .card-box {
+    flex: 0 0 333px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #4CAF50; /* You can replace this color with an image URL to show an actual profile avatar */
+    margin-right: 20px;
+  }
+  
+  .profile-details {
+    flex: 1;
+  }
+  
+  .profile-name {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .profile-subject {
+    margin: 5px 0;
+    color: #888;
+  }
+  
+  .profile-date-time {
+    margin: 5px 0;
+    color: #888;
+  }
+  
+  /* Responsive styles for phone views */
+  @media (max-width: 768px) {
+    .card-container {
+      justify-content: flex-start;
+    }
     
-      }
+    .card-box {
+      flex: 0 0 calc(100% - 20px);
+      max-width: none;
+    }
   }
