@@ -9,7 +9,7 @@ const { userRouter } = require("./routes/users.route");
 const { IndexRouter } = require("./routes/index.router");
 const { googleAuthRouter } = require("./routes/googleAuth.route");
 const { authenticateUser } = require("./middlewares/authenticate.controller");
-const redis = require('redis');
+
 
 //middlewares(inbuilt & third party)_________________________________________________________________________________________________________
 // app.use(cors({
@@ -37,14 +37,15 @@ app.use("/",IndexRouter);
 app.use("/user",userRouter);
 app.use("/auth/google",googleAuthRouter)
 
-app.use("/check",authenticateUser,async(req,res)=>{
-    res.send("success")
-})
+
+
+
 //_________________________________________________________________________________________________________
 db.sequelize.sync().then(()=>{
     app.listen(process.env.port,async(req,res)=>{
         try{
-            console.log(`server started @ http://localhost:${process.env.port}`)
+            console.log(`server started @ http://localhost:${process.env.port}`);
+
         }catch(err){console.log("error in connection",err)}
     })
 })

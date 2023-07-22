@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt")
-
+const {redisClient} = require("../config/redis.connection")
 module.exports = (sequelize,DataTypes)=>{
     const User = sequelize.define("User",{
 
@@ -21,6 +21,12 @@ module.exports = (sequelize,DataTypes)=>{
         const hashedPassword = await bcrypt.hash(user.password, saltRounds);
         user.password = hashedPassword;
         });
+
+
+
+
+        
+        // User.cache(redisClient);
         return User;
         };
     
