@@ -2,9 +2,10 @@ const {authorizeRole} = require("../middlewares/authorizeRole");
 const {Booking} = require("../models/index");
 const bookingRouter = require("express").Router();
 const {authenticateUser} = require("../middlewares/authenticate.controller");
+const { checkConflict } = require("../middlewares/conflicChecking");
 
 //Make a new Booking
-bookingRouter.post("/book-slot/:instructorID",authenticateUser, authorizeRole, async(req,res)=>{
+bookingRouter.post("/book-slot/:instructorID",authenticateUser, authorizeRole,checkConflict, async(req,res)=>{
 
     const instructorID = req.params.instructorID;
     const studentID = req.body.userId;
