@@ -6,14 +6,11 @@
     padding: 0;
     margin: 0;
 }
-body{
-    font-family: sans-serif;
-    background-color: #E5E7EB;
-}
+
 
 body::after {
     content: "";
-    /* background-image: url("https://www.shutterstock.com/image-photo/brutal-strong-bodybuilder-athletic-man-260nw-1277705647.jpg"); */
+    background-image: url("../images/back.png");
     background-size: cover;
     background-position: center center;
     position: fixed;
@@ -233,16 +230,7 @@ tbody > tr:hover{
 a{
     text-decoration: none;
 }
-.link div{
-    background-color: #5184eb;
-    color: #fff;
-    border-radius: 4px;
-    padding: 10px;
-    text-align: center;
-}
-.link div:hover{
-    background-color: #7ba4f5;
-}
+
 .accepted::first-letter, .pending::first-letter{
     text-transform: capitalize;
 }
