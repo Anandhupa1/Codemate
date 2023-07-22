@@ -69,20 +69,20 @@ function createDom(data, status) {
     thead.innerHTML = `<tr>
         <th>S.No</th>
         <th>Name</th>
-        <th>Email</th>
+        <th>Subjects</th>
         <th>Start Time</th>
         <th>End Time</th>
         <th>Acccept</th>
-        <th>Reject</th>
+        <th>Status</th>
       </tr>`;
   } else if (status == "accepted") {
     thead.innerHTML = `<tr>
         <th>S.No</th>
         <th>Name</th>
-        <th>Email</th>
+        <th>Subjects</th>
         <th>Start Time</th>
         <th>End Time</th>
-        <th>Arrange a Virtual Meet</th>
+        <th>Meet platform</th>
       </tr>`;
   } else {
     thead.innerHTML = `<tr>

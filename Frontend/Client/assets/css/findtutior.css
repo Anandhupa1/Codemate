@@ -6,6 +6,7 @@ body{
 	margin:0;
 	padding:0;
 	overflow-x: hidden;
+
 }
 
 *{
@@ -21,10 +22,7 @@ body{
     margin: 0;
     font-family: 'Poppins',sans-serif;
 }
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-}
+
 
 
 .bg-cream{
@@ -145,41 +143,7 @@ body::after {
     color: rgb(0, 0, 0);
   }
   
-  /* Loader */
-  .loader,
-  .loader2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-  }
-  
-  .loader2 {
-    height: 150px;
-  }
-  
-  .loader2 > div {
-    width: 10px;
-    height: 50px;
-    margin: 0 1px;
-    background-color: #f48c06;
-    animation: loaderAnimation 1.2s infinite;
-  }
-  
-  @keyframes loaderAnimation {
-    0% {
-      height: 10px;
-      transform: scaleY(0.1);
-    }
-    50% {
-      height: 50px;
-      transform: scaleY(1);
-    }
-    100% {
-      height: 10px;
-      transform: scaleY(0.1);
-    }
-  }
+
   
   /* Sorting Section */
   #sorting_div {
@@ -189,6 +153,7 @@ body::after {
     margin-bottom: 10px;
     margin-left: 50px;
     margin-right: 50px;
+    padding-top: 60px;
   }
   
   #sort_line {
@@ -320,60 +285,185 @@ body::after {
   
 
 
-
+  
+  /* CSS Grid Layout */
   .card-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* By default, one card per row on mobile */
+    gap: 20px;
     justify-content: center;
-    flex-wrap: wrap;
+    width: 93%;
+    margin: auto;
+}
+  
+  
+  /* Media Query for Desktop View */
+  @media (min-width: 768px) {
+    .card-container {
+      grid-template-columns: repeat(4, 1fr); /* Four cards per row on desktop */
+    }
   }
   
+  /* Card Styling */
   .card-box {
-    flex: 0 0 333px;
-    margin: 10px;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .card-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   }
   
   .profile-avatar {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    background-color: #4CAF50; /* You can replace this color with an image URL to show an actual profile avatar */
-    margin-right: 20px;
-  }
-  
-  .profile-details {
-    flex: 1;
+    margin: 0 auto 15px;
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: #888;
+    text-transform: uppercase;
   }
   
   .profile-name {
-    margin: 0;
     font-size: 24px;
+    margin: 0;
     color: #333;
   }
   
   .profile-subject {
+    font-size: 16px;
     margin: 5px 0;
     color: #888;
   }
   
   .profile-date-time {
-    margin: 5px 0;
-    color: #888;
+    font-size: 14px;
+    color: #666;
+    margin: 0;
   }
   
-  /* Responsive styles for phone views */
-  @media (max-width: 768px) {
-    .card-container {
-      justify-content: flex-start;
+  .profile-price {
+    font-size: 18px;
+    color: #1a73e8;
+    margin: 10px 0;
+  }
+  
+  .book-now-button {
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+  
+  .book-now-button:hover {
+    background-color: #1356c2;
+  }
+  
+
+
+
+  /* Styling for the popup */
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .popup-content {
+    background-color: #f9f9f9;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 60%;
+    max-width: 400px;
+  }
+  
+  .close-popup {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+   display: flex;
+   position:relative;
+   
+
+
+
+  }
+  
+  .close-popup:hover {
+    color: #555;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="submit"] {
+    cursor: pointer;
+    background-color:#F58C06 ;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  h4{
+    padding-top: 15px ;
+    padding-bottom: 15px ;;
+  }
+  /* Additional styles for responsiveness */
+  @media (max-width: 500px) {
+    .popup-content {
+      width: 90%;
     }
-    
-    .card-box {
-      flex: 0 0 calc(100% - 20px);
-      max-width: none;
-    }
+  }
+  
+
+  button{
+    background-color: #F58C06;
+    border: none;
+    padding: 8px ;
+    color: white;
   }
