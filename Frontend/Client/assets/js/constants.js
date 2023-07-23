@@ -1,4 +1,4 @@
 export default {
-    baseUrl : "http://localhost:4001",
+    baseUrl : "https://codematebackendserver.onrender.com",
     
 }
