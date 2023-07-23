@@ -28,6 +28,38 @@ async function isTutorAvailable(tutorID, date, timeSlot) {
   }
 }
 
+// Get route for Bookings
+bookingRouter.get("/",authenticateUser, async(req,res)=>{
+  try {
+      let availableRoles =["student","tutor"]
+      let obj ={};
+      if(req.query.role){
+           if(availableRoles.includes(req.query.role) ){
+              if(req.query.role==="student"){
+                obj.studentID = req.body.userId
+              }else{
+                obj.instructorID = req.body.userId
+              }
+              
+              let data = await Booking.findAll({
+                  where : obj,
+              })
+      
+              res.send(data)
+
+          }
+          else {res.status(404).json("please query upon [ 'student' or 'tutor' or 'admin' ] ")}
+      }else { res.status(404).json("please query upon [ 'student' or 'tutor' or 'admin' ] ")}
+     
+      
+
+      //___________________________________________________
+  
+  } catch (error) {
+      
+  }
+})
+    
 //Make a new Booking
 bookingRouter.post("/book-slot/:instructorID",authenticateUser, authorizeRole,checkConflict, async(req,res)=>{
 
@@ -60,25 +92,25 @@ bookingRouter.post("/book-slot/:instructorID",authenticateUser, authorizeRole,ch
 })
 
 // Update Route for booking
-bookingRouter.put("/update/:bookingID", authenticateUser, authorizeRole, async(req,res)=> {
+bookingRouter.patch("/update/:bookingID", authenticateUser, async(req,res)=> {
     try {
         const { bookingID } = req.params;
-        const { date, timeSlot } = req.body;
+        const { date, timeSlot, meetingStatus } = req.body;
         const user = req.user; 
 
-        const booking = await Booking.findOne({where:{id:user}});
+        const booking = await Booking.findOne({where:{id:Number(req.params.bookingID)}});
     
         if (!booking) {
           return res.status(404).json({ error: 'Booking not found.' });
         }
     
-        if (user.role === 'instructor' && booking.instructorID !== user.id) {
-          return res.status(403).json({ error: 'Forbidden. You are not authorized to update this booking.' });
-        } else if (user.role === 'student' && booking.studentID !== user.id) {
-          return res.status(403).json({ error: 'Forbidden. You are not authorized to update this booking.' });
-        }
+        // if (user.role === 'tutor' && booking.instructorID !== user.id) {
+        //   return res.status(403).json({ error: 'Forbidden. You are not authorized to update this booking.' });
+        // } else if (user.role === 'student' && booking.studentID !== user.id) {
+        //   return res.status(403).json({ error: 'Forbidden. You are not authorized to update this booking.' });
+        // }
     
-        await booking.update({ date, timeSlot });
+        await booking.update({ date, timeSlot, meetingStatus });
     
         res.json({ message: 'Booking updated successfully!', updatedBooking: booking });
       } catch (error) {
