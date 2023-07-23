@@ -89,21 +89,21 @@ async function postAppointment(obj){
           body: JSON.stringify(obj),
         });
     
-        if (!response.ok) {
+        if (response.ok!==true) {
             const responseData = await response.json();
            
-              // alert(JSON.stringify(responseData))
-            swal.fire({
-                icon:"error",
-                text : responseData
-            })
+               alert(JSON.stringify(responseData))
+            // swal.fire({
+            //     icon:"error",
+            //     text : responseData.message
+            // })
          
-        }else {
+        }else  {
             
             
             const responseData = await response.json();
             // console.log(responseData)
-            //  alert(JSON.stringify(responseData,null,2))
+              alert(JSON.stringify(responseData,null,2))
             
             swal.fire({
                 icon:"success",
