@@ -17,13 +17,20 @@ const { bookingRouter } = require("./routes/booking.route");
 //     origin: process.env.frontendDeployedLink,
 //     credentials: true
 //   }));
-const corsOptions = {
-    origin: (origin, callback) => {
-      // Allow requests from any origin
-      callback(null, true);
-    },
-    optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
-  };
+//+++++++++++++++++++++++
+app.use(cors({
+  origin: 'https://tutor-track.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'authToken'], // Include 'authToken' in the list of allowed headers
+}));
+//++++++++++++++++++++++
+// const corsOptions = {
+//     origin: (origin, callback) => {
+//       // Allow requests from any origin
+//       callback(null, true);
+//     },
+//     optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+//   };
   
   // Enable CORS with the custom function allowing all origins
   app.use(cors(corsOptions));
