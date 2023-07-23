@@ -65,15 +65,15 @@ bookingRouter.post("/book-slot/:instructorID",authenticateUser, authorizeRole,ch
 
     const instructorID = req.params.instructorID;
     const studentID = req.body.userId;
-
+    console.log(req.body)
     try {
         const { date, timeSlot, day, meetingType } = req.body;
 
-        const isAvailable = await isTutorAvailable(instructorID, date, timeSlot);
+        // const isAvailable = await isTutorAvailable(instructorID, date, timeSlot);
 
-        if (!isAvailable) {
-          return res.status(400).json({ error: 'Tutor is not available during the requested time slot.' });
-        }
+        // if (!isAvailable) {
+        //   return res.status(400).json({ error: 'Tutor is not available during the requested time slot.' });
+        // }
 
         const newBooking = await Booking.create({
             instructorID,

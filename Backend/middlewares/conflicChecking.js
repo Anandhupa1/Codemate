@@ -21,7 +21,7 @@ try {
           },
         },
       });
-      if(existingAppointment){res.status(409).json("that slot is already booked")}
+      if(existingAppointment){res.status(409).json("Tutor is not available at selected timeSlot.")}
       else {next()}
     //____________________________________________________
 } catch (error) {

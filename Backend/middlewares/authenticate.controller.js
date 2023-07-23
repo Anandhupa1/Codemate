@@ -7,7 +7,7 @@ async function  authenticateUser (req,res,next){
     if(incToken){
         await jwt.verify(incToken, process.env.jwt_secret_key, function(err, decoded) {
             if(err){
-            res.status(401).json({error:"invalid token"})
+            res.status(401).json("invalid token")
              }else {
                  //console.log(decoded.userId,"decoded");
                  req.body.userId =decoded.userId;
