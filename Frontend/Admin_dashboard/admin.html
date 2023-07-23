@@ -43,7 +43,6 @@
                 <li>
                     <a href="#">
                         <span class="icon">
-                            <!-- <ion-icon name="shirt-outline"></ion-icon> -->
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
                         <span class="title" id="getTutors">Tutors Data</span>
@@ -67,15 +66,6 @@
                         <span class="title" id="addnew">Appoint New Tutor</span>
                     </a>
                 </li>
-
-                <!-- <li>
-                    <a href="#">
-                        <span class="icon">
-                            <ion-icon name="people-outline"></ion-icon>
-                        </span>
-                        <span class="title" id="customerlist">Admins</span>
-                    </a>
-                </li> -->
 
 
                 <li>
@@ -146,7 +136,7 @@
 
                 <div class="card">
                     <div>
-                        <div id="totalE" class="numbers"></div>
+                        <div id="totalE" class="numbers">₹ 7850</div>
                         <div class="cardName">Earnings</div>
                     </div>
 
@@ -160,17 +150,17 @@
             <div class="details">
                 <div class="recentOrders">
                     <div class="cardHeader">
-                        <h2>Premium Customers</h2>
-                        <a href="#" class="btn">View All</a>
+                        <h2>Recent Tutors</h2>
+                        <!-- <a href="#" class="btn">View All</a> -->
                     </div>
 
                     <table>
                         <thead>
-                            <tr>
+                            <tr style="background-color:#F48C06; border: 1px solid rgb(255, 255, 255);">
                                 <td>Name</td>
-                                <td>Price</td>
-                                <!-- <td>Payment</td> -->
-                                <td>Plan</td>
+                                <td>Subject</td>
+                                <td>Fees</td>
+                                <td>location</td>
                             </tr>
                         </thead>
 
@@ -187,77 +177,15 @@
                     </div>
 
                     <table>
-                        <tr>
+                        <tbody></tbody>
+                        <!-- <tr>
                             <td width="60px">
                                 <div class="imgBx"><img src="./assets/images/customer01.jpg" alt=""></div>
                             </td>
                             <td>
                                 <h4>Veer<br><span>Bengaluru</span></h4>
                             </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="./assets/images/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Aman<br><span>Mumbai</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="./assets/images/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Rajesh<br> <span>Delhi</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="./assets/images/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Shubham<br><span>Pune</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="./assets/images/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Aryan<br><span>Bhopal</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="./assets/images/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Amit<br> <span>Noida</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="./assets/images/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Puneet<br> <span>Kolkata</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="./assets/images/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Ayush<br> <span>Delhi</span></h4>
-                            </td>
-                        </tr>
+                        </tr> -->
                     </table>
                 </div>
             </div>
@@ -268,6 +196,7 @@
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>

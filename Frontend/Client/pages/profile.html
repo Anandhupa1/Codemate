@@ -1,72 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/profile.css">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <title>Profile</title>
-
+	<meta charset="UTF-8">
+	<title>Profile | Codemate User</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/profile.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
 </head>
-
 <body>
-    <header></header>
-    <div class="mainContainer">
-        <div class="sidebar">
-            <div class="userInfo" id="userInfo">
-                <img src="https://www.pngall.com/wp-content/uploads/5/Profile-Male-Transparent.png" alt="user">
-                <h2 id="userName"></h2>
-            </div>
-            <a href="#">Profile</a>
-            <a href="#">Invite</a>
-            <a href="#">All Rooms</a>
-            <a href="#">Your Subscription</a>
+	<section class="py-5 my-5">
+		<div class="container">
+			<h1 class="mb-5" style="margin-left: 70%;">Account Settings</h1>
+			<div class="bg-white shadow rounded-lg d-block d-sm-flex">
+				<div class="profile-tab-nav border-right">
+					<div class="p-4">
+						<div class="img-circle text-center mb-3">
+							<img id="profileImg" src="../assets/images/Developers-Images/Dharamveer-Photo.jpg" alt="Image" class="shadow">
+						</div>
+						<h3 id="profileName" class="text-center">Dharamveer</h3>
+					</div>
+					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab" aria-controls="account" aria-selected="true">
+							<i class="fa fa-home text-center mr-1"></i> 
+							Account
+						</a>
+						<a class="nav-link" id="password-tab" data-toggle="pill" href="#password" role="tab" aria-controls="password" aria-selected="false">
+							<i class="fa fa-key text-center mr-1"></i> 
+							Password
+						</a>
+						<a class="nav-link" id="notification-tab" data-toggle="pill" id="goBackBtn" href="../index.html" aria-controls="notification" aria-selected="false">
+							<i class="fa fa-arrow-left text-center mr-1"></i>
+							Go Back
+						</a>
+						<br><br>
+						<button id="deleteProfile">Delete Account</button>
+					</div>
+				</div>
+				<div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
+					<div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
+						<!-- <h3 class="mb-4">Account Settings</h3> -->
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Name</label>
+								  	<input id="name" type="text" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Role</label>
+								  	<input id="role" type="text" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Email</label>
+								  	<input id="email" type="text" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Location</label>
+								  	<input id="location" type="text" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Profile Image Url</label>
+								  	<input id="profileUrl" type="url" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Fees</label>
+								  	<input id="fees" type="number" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+								  	<label>Description</label>
+									<textarea id="description" class="form-control" rows="4"></textarea>
+								</div>
+							</div>
+						</div>
+						<div>
+							<button id="updateButton" class="btn btn-primary">Update</button>
+							<button class="btn btn-light">Cancel</button>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+						<h3 class="mb-4">Password Settings</h3>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Old password</label>
+								  	<input type="password" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>New password</label>
+								  	<input type="password" class="form-control">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+								  	<label>Confirm new password</label>
+								  	<input type="password" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div>
+							<button class="btn btn-primary">Update</button>
+							<button class="btn btn-light">Cancel</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-            <button id="logout">Log Out</button>
-            <button id="delAcc">Delete Account</button>
-        </div>
-        <div class="rightInfo">
-            <h1>User Information</h1>
-            <hr>
-            <span>
-                <label for="name">Name</label>
-                <span>
-                    <p id="userName-p"></p>
-                    <button id="editName">Edit</button>
-                </span>
-                <div class="editNameSection hidden">
-                    <input type="text" placeholder="Enter your name">
-                    <button id="editNameSubmit">Done</button>
-                </div>
-            </span>
 
-            <span>
-                <label for="email">Email</label>
-                <span>
-                    <p id="userEmail-p"></p>
-                    <button id="editEmail">Edit</button>
-                </span>
-                <div class="editEmailSection hidden">
-                    <input type="email" placeholder="Enter your Email">
-                    <button id="editNameSubmit">Done</button>
-                </div>
-            </span>
-            <span>
-                <label for="pass">Password</label>
-                <span>
-                    <p id="userPass-p">******</p>
-                    <button id="editPass">Edit</button>
-                </span>
-                <div class="editPassSection hidden">
-                    <input type="password" placeholder="Enter your new Password">
-                    <button id="editNameSubmit">Done</button>
-                </div>
-            </span>
-        </div>
-    </div>
-    <footer style="margin-top: 100px;"></footer>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="../assets/js/profile.js"></script>
 </body>
-<script src="../assets/js/profile.js"></script>
 </html>
