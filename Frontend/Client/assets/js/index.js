@@ -46,7 +46,7 @@ if(sessionStorage.getItem("logined")=="true"){
                         <img src=${userData.profilePic} alt="User Profile">
                         <span>Profile</span>
                       </a>
-                      <a href="./pages/logout.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; &nbsp; Logout</a>
+                      <a onClick="logout()"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; &nbsp; Logout</a>
                     </div>`
 }else{
  userDiv.innerHTML=`
@@ -54,3 +54,8 @@ if(sessionStorage.getItem("logined")=="true"){
 }
 
 }updateUserInfo()
+
+function logout(){
+  sessionStorage.clear();
+  alert("logout successfull")
+}

@@ -9,7 +9,9 @@ function updateUserInfo(){
                             <img src=${userData.profilePic} alt="User Profile">
                             <span>Profile</span>
                           </a>
-                          <a href="./pages/logout.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; &nbsp; Logout</a>
+                          <a href="./pages/dashboard.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; &nbsp; Dashboard</a>
+                          <a onClick="logout()"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; &nbsp; Logout</a>
+                          
                         </div>`
     }else{
      userDiv.innerHTML=`
@@ -17,3 +19,8 @@ function updateUserInfo(){
     }
     
     }updateUserInfo()
+
+    function logout(){
+      sessionStorage.clear();
+      alert("logout successfull")
+    }
