@@ -76,6 +76,7 @@ userRouter.patch("/update",authenticateUser,async(req,res)=>{
         console.log(error)
     }
 })
+
 userRouter.delete("/delete/:id",authenticateUser,async(req,res)=>{
     try {
        
