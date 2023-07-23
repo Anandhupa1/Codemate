@@ -1,6 +1,6 @@
 
 checkLoginStatus()
-let mainUrl = "http://65.0.85.138:4001";
+let mainUrl = "https://codematebackendserver.onrender.com";
 let userData = JSON.parse(sessionStorage.getItem("userData"));
 let role = userData.role;
 

@@ -1,4 +1,4 @@
-let baseUrl = "http://65.0.85.138:4001"
+let baseUrl = "https://codematebackendserver.onrender.com"
 let cardContainer = document.getElementById("cardContainer");
 
 // document.getElementById("form").addEventListener("submit",(e)=>{

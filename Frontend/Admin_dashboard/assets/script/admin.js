@@ -43,7 +43,7 @@ getSButton.addEventListener("click",(e)=>{
   addBox.setAttribute('id', 'getpro');
 
   function fetched(){
-    fetch("http://65.0.85.138:4001/users?role=student")
+    fetch("https://codematebackendserver.onrender.com/users?role=student")
         .then((res)=>res.json())
         .then(res=>{
             console.log(res)
@@ -104,7 +104,7 @@ getTButton.addEventListener("click",(e)=>{
   addBox.setAttribute('id', 'getpro');
 
   function fetched(){
-    fetch("http://65.0.85.138:4001/users?role=tutor")
+    fetch("https://codematebackendserver.onrender.com/users?role=tutor")
         .then((res)=>res.json())
         .then(res=>{
             // console.log(res)
@@ -157,7 +157,7 @@ getTButton.addEventListener("click",(e)=>{
 
 // -----------------------TOTAL STUDENTS--------------------------------
 
-fetch('http://65.0.85.138:4001/users?role=student')
+fetch('https://codematebackendserver.onrender.com/users?role=student')
         .then(res => res.json())
         .then(data => {
             // console.log(data.length)   
@@ -170,7 +170,7 @@ fetch('http://65.0.85.138:4001/users?role=student')
 
 // -----------------------TOTAL TUTOR--------------------------------
 
-fetch('http://65.0.85.138:4001users?role=tutor')
+fetch('https://codematebackendserver.onrender.com/users?role=tutor')
         .then(res => res.json())
         .then(data => {
             // console.log(data.length)   
@@ -200,7 +200,7 @@ fetch('http://65.0.85.138:4001users?role=tutor')
 
 
 function fetchedUser(){
-  fetch("http://65.0.85.138:4001users?role=tutor")
+  fetch("https://codematebackendserver.onrender.com/users?role=tutor")
       .then((res)=>res.json())
       .then(res=>{
           console.log(res)
@@ -241,7 +241,7 @@ data.forEach((el)=>{
 
 
 function fetchUsers() {
-  fetch("http://65.0.85.138:4001/users?role=student")
+  fetch("https://codematebackendserver.onrender.com/users?role=student")
     .then(res => res.json())
     .then(data => {
       const Sbody = document.querySelector(".recentCustomers tbody")
@@ -412,7 +412,7 @@ function createTutorForm() {
     }
 
     // Make the POST request
-    fetch('http://65.0.85.138:4001/user/register', {
+    fetch('https://codematebackendserver.onrender.com/user/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
