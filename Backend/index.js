@@ -33,7 +33,7 @@ app.use(cors({
 //   };
   
   // Enable CORS with the custom function allowing all origins
-  app.use(cors(corsOptions));
+  // app.use(cors(corsOptions));
   
 app.use(express.json())
 app.use(cookieParser())
