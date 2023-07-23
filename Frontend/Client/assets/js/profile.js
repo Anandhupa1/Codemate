@@ -1,26 +1,46 @@
 // ----------Go back button------------
+const getBack = document.getElementById("notification-tab");
+getBack.addEventListener("click",()=>{
+	window.location.href = "../index.html"
+})
 
-function showLoadingAlert() {
-	Swal.fire({
-	  title: 'Extracting User Data...',
-	  allowOutsideClick: false,
+
+// ------------Loading alert---------------
+const showLoading = function() {
+	swal({
+	  title: "Loading User's data",
 	  allowEscapeKey: false,
-	  onBeforeOpen: () => {
-		Swal.showLoading();
-	  },
-	});
-  }
+	  allowOutsideClick: false,
+	  timer: 2000,
+	  onOpen: () => {
+		swal.showLoading();
+	  }
+	}).then(
+	  () => {},
+	  (dismiss) => {
+		if (dismiss === 'timer') {
+		  console.log('closed by timer!!!!');
+		  swal({ 
+			title: 'Finished!',
+			type: 'success',
+			timer: 2000,
+			showConfirmButton: false
+		  })
+		}
+	  }
+	)
+  };
+ 
+//   window.addEventListener("onload", () =>{
+// 	showLoading();
+//   })
 
   function populateUserData() {
-	// try {
-		showLoadingAlert(); 
-  
+	showLoading();
 	  const userID = sessionStorage.getItem('authToken');
 	  const userObj = JSON.parse(sessionStorage.getItem("userData"));
-	  console.log(userObj);
-	//   const response = await fetch(`http://localhost:4001/user/${userID}`);
-	//   const userData = await response.json();
-  
+	//   console.log(userObj);
+
 	  const profileImg = document.getElementById("profileImg");
 	  profileImg.src = userObj.profilePic;
 
@@ -36,18 +56,10 @@ function showLoadingAlert() {
 	  document.getElementById('description').value = userObj.description || '';
 	  document.getElementById('profileUrl').value = userObj.profilePic || '';
   
-	//   Swal.close(); 
-	// } catch (error) {
-	// console.error('Error fetching user data:', error);
-	//   Swal.close(); 
-	// }
+	
   }
   
 	document.addEventListener('DOMContentLoaded', populateUserData);
-// window.addEventListener("onload", ()=>{
-// 	populateUserData();
-// })
-
 
 
 //----------------Update Data-----------------
@@ -91,14 +103,14 @@ updateBtn.addEventListener('click', async (e) => {
 		
 		sessionStorage.setItem('userData',JSON.stringify(data));
 		populateUserData();
-	  } else {
-		// Show an error sweet alert if the request failed
-		// swal('Error', 'Failed to update data. Please try again.', 'error');
-	  }
+	  } 
 	} catch (error) {
 	  console.error('Error updating user data:', error);
-	  // Show an error sweet alert if there was an error in the process
-	//   swal('Error', 'An error occurred while updating data. Please try again.', 'error');
+	  Swal.fire({
+		icon: 'error',
+		title: 'Oops...',
+		text: 'Some error occured while updating data',
+	  });
 	}
   });
   
