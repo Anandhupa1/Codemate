@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:4001"
+const baseUrl = "https://codematebackendserver.onrender.com"
 const currentURL = window.location.href;
 const queryString = currentURL.split('?')[1];
 const params = new URLSearchParams(queryString);
