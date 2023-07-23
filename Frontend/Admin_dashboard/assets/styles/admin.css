@@ -308,8 +308,9 @@ body {
   margin-top: 0px;
 }
 .details table thead td {
-  font-weight: 600;
+  font-weight: bold;
 }
+
 .details .recentOrders table tr {
   color: var(--black1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -505,7 +506,7 @@ body {
 
 /* // ---------------------------------------Update any Products-------------------------------------------- */
 
-#updatepro{
+/* #updatepro{
   width: 95%;
   margin: auto;
   display: grid;
@@ -553,7 +554,66 @@ body {
   background-color: rgb(255, 255, 255);
   color: rgb(132, 216, 5);
   border: 2px solid rgb(132, 216, 5);
+} */
+
+/* -------------------------------Appoint new tutor------------------------------- */
+
+.tutor-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
 }
+
+#tutorForm {
+  width: 100%; 
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px; 
+}
+
+#tutorForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+#tutorForm input,
+#tutorForm textarea {
+  width: 200%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #F48C06;
+  font-weight: 500;
+}
+
+#tutorForm button[type="submit"] {
+  margin-top: 20px; 
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 100%;
+}
+
+#tutorForm button:hover{
+  background-color: rgb(158, 215, 72);
+  color: #f5f5f5;
+  font-weight: bold;
+}
+
+
 
 /*------------------------------- Responsive Design------------------------------- */
 @media (max-width: 991px) {

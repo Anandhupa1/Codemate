@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Anandhu",
+        "email": "Anandhu@gmail.com",
+        "img": "assets/images/Developers-Images/Anandhu-Photo.jpg"
+    },
+    {
+      "name": "Dharamveer",
+      "email": "dharamveer@codemate.com",
+      "img": "assets/images/Developers-Images/Dharamveer-Photo.jpg"
+    },
+    {
+      "name": "Alka",
+      "email": "alka@codemate.com",
+      "img": "assets/images/Developers-Images/Alka-Photo.jpg"
+    },
+    {
+      "name": "Debraj",
+      "email": "devraj@codemate.com",
+      "img": "assets/images/Developers-Images/Debraj-Photo.jpg"
+    },
+    {
+      "name": "Vipin",
+      "email": "alka@codemate.com",
+      "img": "assets/images/Developers-Images/Vipin-Photo1.jpg"
+    }
+  ]
+  
