@@ -1,56 +1,179 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
-	background: #f9f9f9;
-	font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/back.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-.shadow {
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+
+
+
+
+
+
+#main {
+    overflow: hidden;
 }
 
-.profile-tab-nav {
-	min-width: 250px;
+.intro {
+    margin-top: 120px;
+    width: auto;
+    padding: 50px;
+    border: 3px solid #3a7ebe;
+    border-radius: 50px;
+    background-color: #fff2e1;
 }
 
-.tab-content {
-	flex: 1;
+.intro > h1 {
+    font-size: 3rem;
 }
 
-.form-group {
-	margin-bottom: 1.5rem;
+.intro > p {
+    font-weight: bolder;
+    font-size: larger;
 }
 
-.nav-pills a.nav-link {
-	padding: 15px 20px;
-	border-bottom: 1px solid #ddd;
-	border-radius: 0;
-	color: #333;
-}
-.nav-pills a.nav-link i {
-	width: 20px;
+.intro + h1 {
+    margin-top: 200px;
 }
 
-.img-circle img {
-	height: 100px;
-	width: 100px;
-	border-radius: 100%;
-	border: 5px solid #fff;
+.dropdown-style-functionality {
+    margin: 0 1rem 0 0;
+    background-color: rgb(255, 255, 255);
+    margin: 2rem;
+    border-radius: 30px;
+    padding: 1rem;
+    position: relative;
+    box-shadow: 0 10px 15px rgb(0 0 0 / 20%);
+    box-sizing: border-box;
+    width: calc(100% - 4rem);
+    color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(33px);
+    background-blend-mode: overlay;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    font-weight: bolder;
 }
 
-#deleteProfile{
-	background-color: red;
-	width: 80%;
-	margin: auto;
-	margin-top: 50%;
-	border-radius: 8px;
-	padding: 8px;
-	border: none;
-	color: #fff;
-	font-weight: bold;
-	cursor: pointer;
+.left {
+    align-self: baseline;
+    margin-left: 150px;
+    border-radius: 30px 0 30px 30px;
 }
 
-#deleteProfile:hover{
-	background-color: rgb(191, 45, 45);
-	
+.right {
+    align-self: self-end;
+    margin-right: 150px;
+    border-radius: 0 30px 30px 30px;
 }
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer > div {
+    width: 80%; /* Adjusted for responsiveness */
+    color: #3a7ebe;
+}
+
+.mainContainer > div h1 {
+    text-align: center;
+}
+
+.mainContainer > div p {
+    text-align: justify;
+}
+
+.developresLists {
+    color: #3a7ebe; /* There's a typo here (removed the parenthesis) */
+    margin-top: 50px;
+    width: 90%; /* Adjusted for responsiveness */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.allDevelopers {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; /* Added to wrap items in small screens */
+}
+
+.singleDev {
+    margin: 20px; /* Adjusted for responsiveness */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #3a7ebe;
+}
+
+.singleDev img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens (e.g., phones) */
+
+    .intro {
+        margin-top: 80px;
+        padding: 30px;
+    }
+
+    .intro > h1 {
+        font-size: 2rem;
+    }
+
+    .intro > p {
+        font-size: medium;
+    }
+
+    .mainContainer > div {
+        width: 100%;
+    }
+
+    .developresLists {
+        width: 100%;
+    }
+
+    .singleDev {
+        margin: 10px;
+    }
+}
+
+/* New colors for a cooler look */
+
+body {
+    background-color: hsl(34, 100%, 94%);
+}
+
+
