@@ -5,11 +5,11 @@ function updateUserInfo(){
         userDiv.innerHTML=`
         <a href="./login.html"><button class="signup">${userData.name}<i class="fa-solid fa-caret-down"></i></button></a>
                         <div class="dropdown-content">
-                          <a href="./pages/profile.html">
+                          <a href="./profile.html">
                             <img src=${userData.profilePic} alt="User Profile">
                             <span>Profile</span>
                           </a>
-                          <a href="./pages/dashboard.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; &nbsp; Dashboard</a>
+                          <a href="./dashboard.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; &nbsp; Dashboard</a>
                           <a onClick="logout()"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; &nbsp; Logout</a>
                           
                         </div>`

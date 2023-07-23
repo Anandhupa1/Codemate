@@ -46,6 +46,7 @@ if(sessionStorage.getItem("logined")=="true"){
                         <img src=${userData.profilePic} alt="User Profile">
                         <span>Profile</span>
                       </a>
+                      <a  href="./pages/dashboard.html"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; &nbsp; dashboard</a>
                       <a onClick="logout()"><i class="fa-solid fa-right-from-bracket"></i> &nbsp; &nbsp; Logout</a>
                     </div>`
 }else{
