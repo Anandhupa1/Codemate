@@ -1,5 +1,6 @@
 let baseUrl = "http://localhost:4001"
 let cardContainer = document.getElementById("cardContainer");
+
 // document.getElementById("form").addEventListener("submit",(e)=>{
 //     e.preventDefault()
 // })
@@ -50,6 +51,7 @@ function setTutorId(a){
 
 
 function bookAppointMent(){
+    if(sessionStorage.getItem("logined")){
     let tutorId = sessionStorage.getItem("tutorId");
     let date = document.getElementById("mdate").value;
     let day =findDay(date)
@@ -60,6 +62,9 @@ function bookAppointMent(){
 
 //    alert(JSON.stringify(obj,null,2))
 postAppointment(obj)
+    }else{
+      checkLoginStatus()
+    }
 }
 
 function findDay(str){
@@ -71,7 +76,7 @@ return dayOfWeek;
 
 
 async function postAppointment(obj){
-    
+ 
     try {
         const response = await fetch(`${baseUrl}/bookings/book-slot/${obj.insructorId}`, {
           method: 'POST',
@@ -85,7 +90,7 @@ async function postAppointment(obj){
         if (!response.ok) {
             const responseData = await response.json();
            
-              alert(JSON.stringify(responseData))
+              // alert(JSON.stringify(responseData))
             swal.fire({
                 icon:"error",
                 text : responseData
@@ -95,8 +100,8 @@ async function postAppointment(obj){
             
             
             const responseData = await response.json();
-            console.log(responseData)
-             alert(JSON.stringify(responseData,null,2))
+            // console.log(responseData)
+            //  alert(JSON.stringify(responseData,null,2))
             
             swal.fire({
                 icon:"success",
@@ -138,3 +143,20 @@ var popup = document.getElementById('popup-form');
 popup.style.display = 'none';
 }
 
+
+
+//utility functions
+function checkLoginStatus(){
+  if(!sessionStorage.getItem("logined")){
+   
+    swal.fire({
+      icon:"warning",
+      text : "please login to book an appointment ",
+      confirmButtonText : "continue "
+  
+  
+    }).then((result)=>{
+     if(result.isConfirmed){  window.location.href="https://tutor-track.vercel.app/pages/login.html";}
+    })
+  }
+  }
