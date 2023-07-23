@@ -1,4 +1,4 @@
-let baseUrl = "http://localhost:4001"
+let baseUrl = "http://65.0.85.138:4001"
 let cardContainer = document.getElementById("cardContainer");
 
 // document.getElementById("form").addEventListener("submit",(e)=>{

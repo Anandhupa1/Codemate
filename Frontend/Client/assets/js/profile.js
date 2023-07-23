@@ -70,7 +70,7 @@ updateBtn.addEventListener('click', async (e) => {
 	console.log(updatedData)
 	try {
 	  const userID = sessionStorage.getItem('authToken'); // Get user ID from localStorage
-	  const response = await fetch(`http://localhost:4001/user/update`, {
+	  const response = await fetch(`http://65.0.85.138:4001/user/update`, {
 		method: 'PATCH',
 		headers: {
 		  'Content-Type': 'application/json',

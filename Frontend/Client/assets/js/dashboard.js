@@ -1,6 +1,6 @@
 
 checkLoginStatus()
-let mainUrl = "http://localhost:4001";
+let mainUrl = "http://65.0.85.138:4001";
 let userData = JSON.parse(sessionStorage.getItem("userData"));
 let role = userData.role;
 
