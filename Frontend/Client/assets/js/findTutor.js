@@ -9,7 +9,7 @@ let cardContainer = document.getElementById("cardContainer");
 
 async function fetchAndUpdate(){
 
-let res = await fetch(`${baseUrl}/users/?role=tutor`);
+let res = await fetch(`${baseUrl}/users?role=tutor`);
 let data  = await res.json();
 
 insertCards(data)
