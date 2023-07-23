@@ -3,7 +3,7 @@ if(sessionStorage.getItem("logined")=="true"){window.location.href=`https://tuto
 
 
 
-let baseUrl = "http://65.0.85.138:4001"
+let baseUrl = "https://codematebackendserver.onrender.com"
 let submitBtn = document.getElementById("submitBtn");
 let email = document.getElementById("email");
 let password = document.getElementById("password")
