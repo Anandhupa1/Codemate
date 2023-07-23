@@ -123,7 +123,6 @@ bookingRouter.patch("/update/:bookingID", authenticateUser, async(req,res)=> {
 bookingRouter.delete('/delete/:bookingID',authenticateUser, async (req, res) => {
     try {
       const { bookingID } = req.params;
-    
       const user = req.user;
   
       const booking = await Booking.findOne({ where:{id:bookingID}});;

@@ -3,7 +3,7 @@ if(sessionStorage.getItem("logined")=="true"){window.location.href=`https://tuto
 
 
 
-let baseUrl = "http://localhost:4001"
+let baseUrl = "http://65.0.85.138:4001"
 let submitBtn = document.getElementById("submitBtn");
 let email = document.getElementById("email");
 let password = document.getElementById("password")
