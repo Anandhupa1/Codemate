@@ -120,22 +120,23 @@ bookingRouter.patch("/update/:bookingID", authenticateUser, async(req,res)=> {
 })
 
 // Delete the booking route
-bookingRouter.delete('/delete/:bookingID', authorizeRole, async (req, res) => {
+bookingRouter.delete('/delete/:bookingID',authenticateUser, async (req, res) => {
     try {
       const { bookingID } = req.params;
+    
       const user = req.user;
   
-      const booking = await BookingfindOne({ where:{id:user}});;
+      const booking = await Booking.findOne({ where:{id:bookingID}});;
   
       if (!booking) {
         return res.status(404).json({ error: 'Booking not found.' });
       }
  
-      if (user.role === 'instructor' && booking.instructorID !== user.id) {
-        return res.status(403).json({ error: 'Forbidden. You are not authorized to delete this booking.' });
-      } else if (user.role === 'student' && booking.studentID !== user.id) {
-        return res.status(403).json({ error: 'Forbidden. You are not authorized to delete this booking.' });
-      }
+      // if (user.role === 'instructor' && booking.instructorID !== user.id) {
+      //   return res.status(403).json({ error: 'Forbidden. You are not authorized to delete this booking.' });
+      // } else if (user.role === 'student' && booking.studentID !== user.id) {
+      //   return res.status(403).json({ error: 'Forbidden. You are not authorized to delete this booking.' });
+      // }
 
       await booking.destroy();
   
