@@ -8,13 +8,12 @@
   <title>Student Dashboard</title>
 
   <!-- google font link  -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-
   <link rel="stylesheet" href="../assets/css/index.css">
   <link rel="stylesheet" href="../assets/css/booking.css">
-
-    <link rel=" stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel=" stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
@@ -79,34 +78,46 @@
       </div>
       <!-- Loader End -->
       <table>
-        <thead>
-          <tr>
+        <thead id="tHead">
+          <!-- <tr>
             <th>S.No</th>
             <th>Name</th>
             <th>Email</th>
             <th>Start Time</th>
             <th>End Time</th>
-            <th>Acccept</th>
-            <th>Reject</th>
-          </tr>
+            <th>status</th>
+            <th>change status</th>
+            <th>confirm</th>
+          </tr> -->
         </thead>
 
-        <tbody>
+        <tbody id="tbody1">
           <!-- Append data here -->
-          <div class="loader2" id="loader2">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-            <div class="bar4"></div>
-            <div class="bar5"></div>
-            <div class="bar6"></div>
-            <div class="bar7"></div>
-            <div class="bar8"></div>
-            <div class="bar9"></div>
-            <div class="bar10"></div>
-            <div class="bar11"></div>
-            <div class="bar12"></div>
-          </div>
+          
+
+            
+
+            <tr class="pending">
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>pending</th>
+            <th>
+              <select name="" id="appointmentStatus" class="beautiful-select">
+                <option value="accept">Accept</option>
+                <option value="reject">Reject</option>
+              </select>
+            </th>
+            <th>  <button class="beautiful-button">save</button></th>
+            </tr>
+
+            
+            
+            
+            
+         
         </tbody>
       </table>
     </div>
@@ -221,6 +232,6 @@
 
 </body>
  <script src="../assets/js/index.js"></script>
-<script src="../assets/js/bookings.js"></script>
+<script src="../assets/js/dashboard.js"></script>
 
 </html>
