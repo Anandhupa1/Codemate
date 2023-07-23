@@ -85,7 +85,7 @@ async function postAppointment(obj){
         if (!response.ok) {
             const responseData = await response.json();
            
-            // alert(JSON.stringify(responseData))
+              alert(JSON.stringify(responseData))
             swal.fire({
                 icon:"error",
                 text : responseData
@@ -96,7 +96,7 @@ async function postAppointment(obj){
             
             const responseData = await response.json();
             console.log(responseData)
-            // alert(JSON.stringify(responseData,null,2))
+             alert(JSON.stringify(responseData,null,2))
             
             swal.fire({
                 icon:"success",
