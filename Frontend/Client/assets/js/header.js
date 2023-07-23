@@ -23,4 +23,5 @@ function updateUserInfo(){
     function logout(){
       sessionStorage.clear();
       alert("logout successfull")
+      window.location.href="https://tutor-track.vercel.app"
     }
