@@ -179,8 +179,9 @@ td{
 }
 tbody > tr:hover{
     background-color: rgb(250, 247, 247);
+    color:black;
 }
-
+tbody 
 .accept > div{
     padding: 10px;
     background-color: rgb(121, 223, 121);
@@ -234,24 +235,58 @@ a{
 .accepted::first-letter, .pending::first-letter{
     text-transform: capitalize;
 }
-.accepted div{
+.accepted {
     background-color: rgb(121, 223, 121);
     color: white;
     padding: 10px;
     border-radius: 4px;
     text-align: center;
 }
-.pending div{
-    background-color: #5184eb;
+.pending {
+    background-color: #739ef2;
     color: white;
     padding: 10px;
     border-radius: 4px;
     text-align: center;
 }
-.rejected div{
-    background-color: #df5e5e;
+.rejected{
+    background-color: #eb6060;
     color: #fff;
     padding: 10px;
     border-radius: 4px;
     text-align: center;
 }
+
+/* Style for the select dropdown */
+.beautiful-select {
+  
+    padding: 1px 7px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    outline: none;
+  }
+  
+  /* Style for the button */
+  .beautiful-button {
+    background-color: white;
+    border: 1px solid #ccc;
+    
+    padding: 2px 7px;
+    
+    border-radius: 4px;
+    cursor: pointer;
+   
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Style for the button on hover */
+  .beautiful-button:hover {
+    background-color: #f9f9f9; /* Slightly darker background on hover */
+  }
+  
+  /* Style for the button on click/active */
+  .beautiful-button:active {
+    background-color: #f2f2f2; /* Even darker background when clicked */
+  }
+  
