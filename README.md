@@ -6,7 +6,7 @@
   <br>
   <p>Welcome to Tutor Track doctor Tutor website that offers online Tutor appointment booking.</p>
   <br>
-  <p>Our system provides a user-friendly platform that enables users to browse, book, and cancel tutor appointment with ease. </p>
+  <p>A tutor booking app is a web application designed to connect students in need of academic support with qualified tutors. The app streamlines the process of finding, scheduling, and managing tutoring sessions, making it convenient and efficient for both students and tutors </p>
 </div>
 
 ## TECH STACKS USED
