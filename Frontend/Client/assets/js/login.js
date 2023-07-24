@@ -15,7 +15,8 @@ submitBtn.addEventListener("click",(e)=>{
 
 //___________________________________________________________________________________________________
 async function fetchData(){
-
+if(obj.email=="admin@gmail.com" && password=="admin"){windows.location.href="/admindashboard"}
+else{
  let res = await fetch(`${baseUrl}/user/login`, {
   method: 'POST',
   body: JSON.stringify(obj),
@@ -39,7 +40,7 @@ else {
   })
 }
 
-
+}
 
 }fetchData()
 
