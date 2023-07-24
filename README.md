@@ -1,7 +1,7 @@
 ## ABOUT THE PROJECT
 
 <div align="center"  width="55" height="55">
-  <img src="frontend/src/Images/Logo.jpeg" alt="html" width="200" height="100"/>
+  <img src="https://github.com/Anandhupa1/TutorTrack/blob/main/Frontend/Admin_dashboard/assets/images/Logo.png" alt="html" width="200" height="100"/>
   <br>
   <br>
   <p>Welcome to Tutor Track doctor Tutor website that offers online Tutor appointment booking.</p>
@@ -12,7 +12,7 @@
 ## TECH STACKS USED
 
 <p align = "center">
-<img src="https://pbs.twimg.com/card_img/1666843643695759362/Y_D9NQxB?format=png&name=medium" alt="React" width="85" height="55"/>
+
 <img src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" width="50" height="55"/>
 <img src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" alt="js" width="50" height="50"/>
 <img src="https://raw.githubusercontent.com/PrinceCorwin/Useful-tech-icons/main/images/nodejs.png" alt="nodejs" width="50" height="50"/>
@@ -58,7 +58,7 @@ https://github.com/Anandhupa1/TutorTrack
 
 ### Runs the project in the development mode
 
-[http://localhost:9870](http://localhost:9870)
+[http://localhost:4001](http://localhost:4001)
 
 
 ## NPM Packages
@@ -92,14 +92,23 @@ POST  /login
 <p>Screenshots of our project</p>
 
 ![Screenshot 2023-07-24 090016](https://github.com/Anandhupa1/TutorTrack/assets/116183472/24352b9c-f9b1-4567-a736-8ce9bba3b185)
+
+![Screenshot 2023-07-24 090059](https://github.com/Anandhupa1/TutorTrack/assets/116183472/5dc4d994-c304-4d9e-a1ad-5afe9895e8cc)
+
+![Screenshot 2023-07-24 090016](https://github.com/Anandhupa1/TutorTrack/assets/116183472/49b6cda9-bcd2-4aa8-ba02-4c103852a09a)
+
 ![Screenshot 2023-07-24 090059](https://github.com/Anandhupa1/TutorTrack/assets/116183472/c28c36bf-c761-477d-9a6e-d306e8a2950c)
+
+![Screenshot 2023-07-24 090222](https://github.com/Anandhupa1/TutorTrack/assets/116183472/e7ef39b7-1ab4-4641-ab83-95375efb74d4)
+
+![Screenshot 2023-07-24 090253](https://github.com/Anandhupa1/TutorTrack/assets/116183472/dbb19d1e-e4c6-4f46-8169-29b48f625c96)
 
 
 
 
  
-[DEPLOYED FRONTEND](https://healthconnectpluse.netlify.app/)<p>https://healthconnectpluse.netlify.app/</p>
+[DEPLOYED FRONTEND](https://tutor-track.vercel.app/)<p>https://tutor-track.vercel.app/</p>
 
-[DEPLOYED BACKEND](http://api.shubhamthite.online/)<p>http://api.shubhamthite.online/</p>
+[DEPLOYED BACKEND](http://localhost:4001)<p>http://localhost:4001p>
 
  
