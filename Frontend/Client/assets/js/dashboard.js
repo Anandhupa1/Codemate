@@ -18,7 +18,7 @@ async function fetchData(){
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('authToken', sessionStorage.getItem("authToken"));
-    const response = await fetch(`${baseUrl}/bookings?role=${role}`, {
+    const response = await fetch(`${mainUrl}/bookings?role=${role}`, {
         method: 'GET', // Change to 'POST', 'PUT', 'DELETE', etc. for other types of requests
         headers: headers,
       });
@@ -200,7 +200,7 @@ async function updateStatus(id,status){
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('authToken', sessionStorage.getItem("authToken"));
-    const response = await fetch(`${baseUrl}/bookings/update/${id}`, {
+    const response = await fetch(`${mainUrl}/bookings/update/${id}`, {
         method: 'PATCH', // Change to 'POST', 'PUT', 'DELETE', etc. for other types of requests
         headers: headers,
         body : JSON.stringify(obj)
@@ -228,7 +228,7 @@ async function deleteBooking(id){
         const headers = new Headers();
         headers.append('Content-Type', 'application/json');
         headers.append('authToken', sessionStorage.getItem("authToken"));
-        const response = await fetch(`${baseUrl}/bookings/delete/${id}`, {
+        const response = await fetch(`${mainUrl}/bookings/delete/${id}`, {
             method: 'DELETE', // Change to 'POST', 'PUT', 'DELETE', etc. for other types of requests
             headers: headers,
           });
