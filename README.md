@@ -1,4 +1,3 @@
-## ABOUT THE PROJECT
 
 <div align="center"  width="55" height="55">
   <img src="https://github.com/Anandhupa1/TutorTrack/blob/main/Frontend/Admin_dashboard/assets/images/Logo.png" alt="html" width="200" height="100"/>
