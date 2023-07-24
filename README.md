@@ -73,20 +73,6 @@ https://github.com/Anandhupa1/TutorTrack
 
    
    
-## API Endpoints
-   #### Welcome
-```javascript
-GET  /
-```
-  #### Registration
-```javascript
-POST  /reg
-```
-  #### Signin
-```javascript
-POST  /login
-
-```
 <div align = "center">  
 
 <p>Screenshots of our project</p>
