@@ -26,7 +26,7 @@ toggle.onclick = function () {
 const signout = document.querySelector("#signout")
 
 signout.addEventListener("click",()=>{
-  window.location.href = "../Client/index.html"
+  window.location.href = "https://tutor-track.vercel.app/"
 })
 
 
