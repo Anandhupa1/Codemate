@@ -91,18 +91,8 @@ POST  /login
 
 <p>Screenshots of our project</p>
 
-![Screenshot (268)](https://github.com/omkar231098/rough-support-2269/assets/115460277/86e4d260-024d-4d98-bcf5-d48f87f68f85)
+![Screenshot 2023-07-24 090016](https://github.com/Anandhupa1/TutorTrack/assets/116183472/452fa2ba-e39a-48da-b545-b25927c2e898)
 
-
-![Screenshot (269)](https://github.com/omkar231098/rough-support-2269/assets/115460277/2b283334-56e4-4d2b-93b0-e76dc2948d3e)
-
-![Screenshot (273)](https://github.com/omkar231098/rough-support-2269/assets/115460277/d4930f4b-539e-4606-8bd1-32828ee44406)
-
-
-![Screenshot (270)](https://github.com/omkar231098/rough-support-2269/assets/115460277/303399b5-8c94-4fae-a9f9-aa0a02807479)
-
-
-![Screenshot (271)](https://github.com/omkar231098/rough-support-2269/assets/115460277/21686844-ea94-46be-b91e-f63b4b009ad3)
 
 
 ![Screenshot (272)](https://github.com/omkar231098/rough-support-2269/assets/115460277/6254e4ce-bfc8-493b-bcbb-b6aa5cca3040)
