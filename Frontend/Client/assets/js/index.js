@@ -56,8 +56,12 @@ if(sessionStorage.getItem("logined")=="true"){
 
 }updateUserInfo()
 
+
 function logout(){
   sessionStorage.clear();
-  alert("logout successfull")
+  swal .fire({
+    icon : "success",
+    text : "logged out successfully"
+  })
   window.location.href="https://tutor-track.vercel.app"
 }

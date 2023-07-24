@@ -36,7 +36,7 @@ const showLoading = function() {
 //   })
 
   function populateUserData() {
-	showLoading();
+	// showLoading();
 	  const userID = sessionStorage.getItem('authToken');
 	  const userObj = JSON.parse(sessionStorage.getItem("userData"));
 	//   console.log(userObj);
