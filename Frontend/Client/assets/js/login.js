@@ -15,7 +15,9 @@ submitBtn.addEventListener("click",(e)=>{
 
 //___________________________________________________________________________________________________
 async function fetchData(){
-if(obj.email=="admin@gmail.com" && password=="admin"){windows.location.href="https://codemate-admindashboard.netlify.app"}
+if(obj.email=="admin@gmail.com" && obj.password=="admin"){
+  
+  window.location.href="https://codemate-admindashboard.netlify.app"}
 else{
  let res = await fetch(`${baseUrl}/user/login`, {
   method: 'POST',
