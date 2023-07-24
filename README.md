@@ -11,7 +11,7 @@
 ## TECH STACKS USED
 
 <p align = "center">
-<img src="https://github.com/Anandhupa1/TutorTrack/blob/main/Frontend/Client/assets/images/System%20Design.png?raw=true" alt="npm" width="50" height="50"/>
+
 <img src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" width="50" height="55"/>
 <img src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" alt="js" width="50" height="50"/>
 <img src="https://raw.githubusercontent.com/PrinceCorwin/Useful-tech-icons/main/images/nodejs.png" alt="nodejs" width="50" height="50"/>
@@ -62,6 +62,7 @@ https://github.com/Anandhupa1/TutorTrack
 
 ## NPM Packages
 <p align = "center">
+  
 <img src="https://repository-images.githubusercontent.com/139898859/9617c480-81c2-11ea-94fc-322231ead1f0" alt="bcrypt.png" width="70" height="50"/>
 <img src="https://github.com/faraz412/cozy-passenger-4798/blob/main/Frontend/Files/cors.png?raw=true" alt="cors" width="70" height="50"/>
 <img src="https://github.com/faraz412/cozy-passenger-4798/blob/main/Frontend/Files/download.png?raw=true" alt="dotenv" width="60" height="50"/>
@@ -74,9 +75,10 @@ https://github.com/Anandhupa1/TutorTrack
    
 <div align = "center">  
 
-<p>Screenshots of our project</p>
+<p>System Design</p>
 
-![Screenshot 2023-07-24 090016](https://github.com/Anandhupa1/TutorTrack/assets/116183472/24352b9c-f9b1-4567-a736-8ce9bba3b185)
+
+![Screenshot 2023-07-24 090016](https://github.com/Anandhupa1/TutorTrack/blob/main/Frontend/Client/assets/images/System%20Design.png?raw=true)
 
 ![Screenshot 2023-07-24 090059](https://github.com/Anandhupa1/TutorTrack/assets/116183472/5dc4d994-c304-4d9e-a1ad-5afe9895e8cc)
 
