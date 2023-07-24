@@ -29,7 +29,7 @@
 
  [Anandhu P A](https://github.com/Anandhupa1) 
  
- [Alka Trivedi](https://github.com/Alka0814)) 
+ [Alka Trivedi](https://github.com/Alka0814) 
  
  [Debraj Roy](https://github.com/ShradhaVastrakar) 
  
