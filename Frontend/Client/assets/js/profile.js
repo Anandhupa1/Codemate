@@ -7,7 +7,7 @@ getBack.addEventListener("click",()=>{
 
 // ------------Loading alert---------------
 const showLoading = function() {
-	swal({
+	swal.fire({
 	  title: "Loading User's data",
 	  allowEscapeKey: false,
 	  allowOutsideClick: false,
@@ -65,6 +65,7 @@ const showLoading = function() {
 //----------------Update Data-----------------
 
 let updateBtn = document.getElementById('updateButton');
+
 
 updateBtn.addEventListener('click', async (e) => {
 	e.preventDefault();
