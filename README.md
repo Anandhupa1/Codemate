@@ -15,10 +15,13 @@
 
 </div>
 
-## TECH STACKS USED
+<br/>
+<br/>
+<h3 align="center">Tech Stack</h3>
 
 <p align = "center">
 
+<br/>
 <img src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" width="50" height="55"/>
 <img src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" alt="js" width="50" height="50"/>
 <img src="https://raw.githubusercontent.com/PrinceCorwin/Useful-tech-icons/main/images/nodejs.png" alt="nodejs" width="50" height="50"/>
@@ -28,81 +31,44 @@
 <img src="https://user-images.githubusercontent.com/25181517/121401671-49102800-c959-11eb-9f6f-74d49a5e1774.png" alt="npm" width="50" height="50"/>
   
 </p>
-<hr>
 
-## Team Members
-
-
- [Anandhu P A](https://github.com/Anandhupa1) 
- 
- [Alka Trivedi](https://github.com/Alka0814) 
- 
- [Debraj Roy](https://github.com/ShradhaVastrakar) 
- 
- [Dharamveer](https://github.com/vaibhzz10) 
- 
- [Vipin Kumar](https://github.com/Vipin4147) 
-
- 
-## Features 
--  Authentication
--  API Validation
--  Responsive
--  Cross Platform
--  Different Interface for both Tutor and Students
--  Registeration/Signin/Logout
--  Appointment Booking
--  Admin can perform all CRUD operations
-
-## Run Locally
-### Clone this Project
-
-```
-https://github.com/Anandhupa1/TutorTrack
-```
-
-
-### Runs the project in the development mode
-
-[http://localhost:4001](http://localhost:4001)
-
-
-## NPM Packages
-<p align = "center">
-  
-<img src="https://repository-images.githubusercontent.com/139898859/9617c480-81c2-11ea-94fc-322231ead1f0" alt="bcrypt.png" width="70" height="50"/>
-<img src="https://github.com/faraz412/cozy-passenger-4798/blob/main/Frontend/Files/cors.png?raw=true" alt="cors" width="70" height="50"/>
-<img src="https://github.com/faraz412/cozy-passenger-4798/blob/main/Frontend/Files/download.png?raw=true" alt="dotenv" width="60" height="50"/>
-<img src="https://github.com/faraz412/cozy-passenger-4798/blob/main/Frontend/Files/JWT.png?raw=true" alt="jwt" width="70" height="50"/>
-<img src="https://4008838.fs1.hubspotusercontent-na1.net/hubfs/4008838/mogoose-logo.png" alt="mongoose.png" width="70" height="70"/>     
-<img src="https://i0.wp.com/community.nodemailer.com/wp-content/uploads/2015/10/n2-2.png?fit=422%2C360&ssl=1" alt="nodemailer" width="50" height="70"/>
-<img src="https://user-images.githubusercontent.com/13700/35731649-652807e8-080e-11e8-88fd-1b2f6d553b2d.png" alt="nodemon.png" width="50" height="50"/>
-
-   
-   
-<div align = "center">  
-
-<p>System Design</p>
-
+<br/>
+<br/>
+<h3  align="center">System Design</h3>
+<br/>
 
 ![Screenshot 2023-07-24 090016](https://github.com/Anandhupa1/TutorTrack/blob/main/Frontend/Client/assets/images/System%20Design.png?raw=true)
 
-![Screenshot 2023-07-24 090059](https://github.com/Anandhupa1/TutorTrack/assets/116183472/5dc4d994-c304-4d9e-a1ad-5afe9895e8cc)
 
-![Screenshot 2023-07-24 090016](https://github.com/Anandhupa1/TutorTrack/assets/116183472/49b6cda9-bcd2-4aa8-ba02-4c103852a09a)
+<br/>
+<br/>
 
-![Screenshot 2023-07-24 090059](https://github.com/Anandhupa1/TutorTrack/assets/116183472/c28c36bf-c761-477d-9a6e-d306e8a2950c)
+<h3  align="center">Features</h3>
+<br/>
+<div  align ="center" style=" padding: 10px; border-radius: 5px; display :flex; flex-wrap:wrap;">
+  
+| Registeration/Signin/Logout| API Validation | Responsiveness  |Student's Dashboard | Tutor's Dashboard  | Appointment Booking | Appointment CRUD  | Admin Dashboard  |
+| --- | --- | --- | --- | --- | --- | --- | --- | 
 
-![Screenshot 2023-07-24 090222](https://github.com/Anandhupa1/TutorTrack/assets/116183472/e7ef39b7-1ab4-4641-ab83-95375efb74d4)
-
-![Screenshot 2023-07-24 090253](https://github.com/Anandhupa1/TutorTrack/assets/116183472/dbb19d1e-e4c6-4f46-8169-29b48f625c96)
-
-
+</div>
+<br/>
+<br/>
 
 
- 
-[DEPLOYED FRONTEND](https://tutor-track.vercel.app/)<p>https://tutor-track.vercel.app/</p>
+<h3  align="center">Team Members</h3>
+<br/>
+<div  align ="center" style="background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
+  
+| [Anandhu P A](https://github.com/Anandhupa1) | [Dharamveer](https://github.com/vaibhzz10) | [Debraj Roy](https://github.com/ShradhaVastrakar) | [Alka Trivedi](https://github.com/Alka0814)  | [Vipin Kumar](https://github.com/Vipin4147) |
+| --- | --- | --- | --- | --- |
 
-[DEPLOYED BACKEND](http://localhost:4001)<p>http://localhost:4001p>
+</div>
+
+
+
+
+
+
+
 
  
