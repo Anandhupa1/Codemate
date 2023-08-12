@@ -1,18 +1,18 @@
-![](https://github.com/Anandhupa1/Codemate/blob/main/Frontend/Client/assets/gifs/codemategif.gif)
+
+
+
 
 <div align="center"  width="55" height="55">
   <img src="https://github.com/Anandhupa1/TutorTrack/blob/main/Frontend/Admin_dashboard/assets/images/Logo.png" alt="html" width="200" height="100"/>
 
+
   <br>
+  <p align="justify">A web application designed to connect students in need of academic support with qualified tutors. The app streamlines the process of finding, scheduling, and managing tutoring sessions, making it convenient and efficient for both students and tutors </p>
+   <br>
+<img alt="Awesome GitHub Profile Readme" src="Frontend/Client/assets/gifs/codemategif.gif"> </img>
 
 
 
-
-  
-  <br>
-  <p>Welcome to codemate -your study session sheduler application, that offers online Tutor appointment booking.</p>
-  <br>
-  <p>A tutor booking app is a web application designed to connect students in need of academic support with qualified tutors. The app streamlines the process of finding, scheduling, and managing tutoring sessions, making it convenient and efficient for both students and tutors </p>
 </div>
 
 ## TECH STACKS USED
