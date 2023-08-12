@@ -1,10 +1,10 @@
-
+![](https://github.com/Anandhupa1/Codemate/blob/main/Frontend/Client/assets/gifs/codemategif.gif)
 
 <div align="center"  width="55" height="55">
   <img src="https://github.com/Anandhupa1/TutorTrack/blob/main/Frontend/Admin_dashboard/assets/images/Logo.png" alt="html" width="200" height="100"/>
 
   <br>
-![](https://github.com/Anandhupa1/Codemate/blob/main/Frontend/Client/assets/gifs/codemategif.gif)
+
 
 
 
