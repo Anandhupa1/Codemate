@@ -7,7 +7,7 @@
 
 
   <br>
-  <p align="justify">A web application designed to connect students in need of academic support with qualified tutors. The app streamlines the process of finding, scheduling, and managing tutoring sessions, making it convenient and efficient for both students and tutors </p>
+  <p align="justify">A web application designed to connect students in need of academic support with qualified tutors. The app streamlines the process of finding, scheduling, and managing tutoring sessions, making it convenient and efficient for both students and tutors. </p>
    <br>
 <img alt="Awesome GitHub Profile Readme" src="Frontend/Client/assets/gifs/codemategif.gif"> </img>
 
